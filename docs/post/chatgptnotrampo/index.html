@@ -1,0 +1,476 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: "
+  lang="pt"
+>
+  <head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Use tranquilo o ChatGPT no Trampo - Tim DevOps</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Salve! Desde que o ChatGPT apareceu, a parada mudou completamente. Pra quem tá por fora, essa é a parada revolucionária da OpenAI que chegou em novembro de 2022. Tá ajudando a galera a fazer de TUDO, desde escrever um texto até escrever funçoes lambdas complexas. Mas ó, não vacila com os dados da empresa. Vamos bater um papo sobre como usar essa novidade e, ao mesmo tempo, manter as infos da firma safe." />
+  <meta name="author" content="Renato Ruis (Tim)" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://timdevops.com.br/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://i.imgur.com/d8VeuPh.jpg" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/github.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/instagram.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/linkedin.svg" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://timdevops.com.br/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://timdevops.com.br/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.129.0">
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="Use tranquilo o ChatGPT no Trampo">
+  <meta itemprop="description" content="Mas fique esperto">
+  <meta itemprop="datePublished" content="2023-11-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-11-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="391">
+  <meta itemprop="keywords" content="Treinamentos">
+  
+  <meta property="og:url" content="https://timdevops.com.br/post/chatgptnotrampo/">
+  <meta property="og:site_name" content="Tim DevOps">
+  <meta property="og:title" content="Use tranquilo o ChatGPT no Trampo">
+  <meta property="og:description" content="Mas fique esperto">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-11-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-11-23T00:00:00+00:00">
+    <meta property="article:tag" content="Treinamentos">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Use tranquilo o ChatGPT no Trampo">
+  <meta name="twitter:description" content="Mas fique esperto">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://timdevops.com.br/post/chatgptnotrampo/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    
+
+<header class="mx-auto flex h-20 max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+
+<div class="flex items-center">
+
+  <div
+    class="-ml-1 mr-5 aspect-square w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:bg-white/[15%]" >
+
+    
+    <img
+      class="my-0 h-full w-full rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="https://i.imgur.com/d8VeuPh.jpg"
+      alt="Tim DevOps"
+      />
+    
+  </div>
+
+
+    <a class="-translate-y-[1px] text-2xl" href="https://timdevops.com.br/"
+      >Tim DevOps</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = ''.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home </a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About </a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+
+      
+
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Use tranquilo o ChatGPT no Trampo</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Nov 23, 2023</time>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Renato Ruis (Tim)</span>
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="1_mP2NJ0i4IaDd9yMQUgXjIQ.png" alt=""></p>
+<p>Salve! Desde que o ChatGPT apareceu, a parada mudou completamente. Pra quem tá por fora, essa é a parada revolucionária da <a href="https://openai.com/">OpenAI</a> que chegou em novembro de 2022. Tá ajudando a galera a fazer de TUDO, desde escrever um texto até escrever funçoes lambdas complexas. Mas ó, não vacila com os dados da empresa. Vamos bater um papo sobre como usar essa novidade e, ao mesmo tempo, manter as infos da firma safe.</p>
+<p>Fala sério! o ChatGPT é demais! Ajuda a dar aquele gás nas tarefas do dia a dia e até alivia a cabeça. Só que, como o Simon Johnson, lá do MIT, deu a letra, tem que ficar ligado pra não deixar vazar dados da sua empresa. Na real, é usar com cuidado pra não dar brecha pra vazamentos ou deixar que a concorrência se aproveite das suas ideias.</p>
+<p>Pra quem mexe com DevOps, SRE, Cloud e afins, segurar a onda com a segurança é regra número um, um não ZERO. Então, quando for usar o ChatGPT:</p>
+<ul>
+<li>
+<p>**Não vai colar senhas, chaves de acesso ou qualquer coisa muito interna. **✅</p>
+</li>
+<li>
+<p>**Evita falar/escrever sobre estratégias da empresa ou coisas que não devem sair da sala de reunião. **✅</p>
+</li>
+<li>
+<p>**Cuidado ao detalhar a infraestrutura de TI, pra não entregar o ouro pro bandido. **✅</p>
+</li>
+</ul>
+<p>Inovação com Responsa Adotar o ChatGPT pode ser um boost e tanto na produtividade e na inovação. Mas é aquela coisa: mantém a animação na medida e a segurança dos dados sempre em check. Bora usar essa ferramenta incrível, mas sem esquecer de cuidar das informações da firma pow!</p>
+<p>Dicas Rápidas de Segurança:</p>
+<ol>
+<li>
+<p><strong>Checa Duas Vezes: Antes de mandar qualquer coisa pelo ChatGPT, confirma se não tá indo nada sigiloso ou aquela secret key da AWS hahaha.</strong></p>
+</li>
+<li>
+<p><strong>Treinamentos: Faz uns workshops com a equipe pra galera ficar por dentro de como usar a IA sem perrengue, e ainda ganha um ponto com a galera</strong></p>
+</li>
+<li>
+<p><strong>Política de Privacidade: Fica de olho nas regras de privacidade da OpenAI.</strong></p>
+</li>
+</ol>
+<p>Conclusão: E aí, é isso! O ChatGPT é um baita aliado pra quem trabalha com tech, mas só se a segurança dos dados da empresa for levada a sério.</p>
+<p>Fica esperto, aproveita a tecnologia, mas sempre com um olho no peixe e outro no gato! 😉👍</p>
+<p>#AI #ChatGPT #SEC #DEVSECOPS <a href="https://www.linkedin.com/feed/hashtag/?keywords=devops&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#DevOps</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=cloudcomputing&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#CloudComputing</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=containers&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#Containers</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=automa%C3%A7%C3%A3o&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#Automação</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=sre&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#SRE</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=kubernetes&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#kubernetes</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=aws&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#aws</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=sre&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#sre</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=platformengineering&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#platformengineering</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=linux&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#linux</a> <a href="https://www.linkedin.com/feed/hashtag/?keywords=blog&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7133521789099401217">#blog</a></p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline dark:bg-white/[8%]"
+      href="https://timdevops.com.br/tags/treinamentos"
+      >Treinamentos</a
+    >
+    
+  </footer>
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="renatoruis/timdevops.blog"
+    data-repo-id="R_kgDOMbpkjQ"
+    data-category="General"
+    data-category-id="DIC_kwDOMbpkjc4ChNbV"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="pt"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >feito com hugo️️</a
+  >️
+
+</footer>
+
+  </body>
+</html>

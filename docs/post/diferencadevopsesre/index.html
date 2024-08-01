@@ -1,0 +1,507 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: "
+  lang="pt"
+>
+  <head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma - Tim DevOps</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Salve!
+Hoje, vamos falar do universo da engenharia de software e explorar as nuances entre quatro papéis essenciais: DevOps, DevSecOps, SRE (Site Reliability Engineering) e Engenheiro de Plataforma. Embora essas funções sejam cruciais para o sucesso das operações de TI, é importante destacar que nem tudo é 100% certo no mundo dinâmico da tecnologia. Vamos ver um pouco essas diferenças.
+DevOps: A Colaboração no Centro O DevOps é como uma cola que une equipes de desenvolvimento e operações." />
+  <meta name="author" content="Renato Ruis (Tim)" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://timdevops.com.br/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://i.imgur.com/d8VeuPh.jpg" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/github.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/instagram.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/linkedin.svg" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://timdevops.com.br/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://timdevops.com.br/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.129.0">
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma">
+  <meta itemprop="description" content="Para Iniciantes">
+  <meta itemprop="datePublished" content="2023-09-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-09-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="477">
+  
+  <meta property="og:url" content="https://timdevops.com.br/post/diferencadevopsesre/">
+  <meta property="og:site_name" content="Tim DevOps">
+  <meta property="og:title" content="As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma">
+  <meta property="og:description" content="Para Iniciantes">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-09-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-09-20T00:00:00+00:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma">
+  <meta name="twitter:description" content="Para Iniciantes">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://timdevops.com.br/post/diferencadevopsesre/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    
+
+<header class="mx-auto flex h-20 max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+
+<div class="flex items-center">
+
+  <div
+    class="-ml-1 mr-5 aspect-square w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:bg-white/[15%]" >
+
+    
+    <img
+      class="my-0 h-full w-full rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="https://i.imgur.com/d8VeuPh.jpg"
+      alt="Tim DevOps"
+      />
+    
+  </div>
+
+
+    <a class="-translate-y-[1px] text-2xl" href="https://timdevops.com.br/"
+      >Tim DevOps</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = ''.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home </a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About </a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+
+      
+
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Sep 20, 2023</time>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Renato Ruis (Tim)</span>
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="1_KoHMxYihHSxdB4X6KAz4JA.png" alt=""></p>
+<p>Salve!</p>
+<p>Hoje, vamos falar do universo da engenharia de software e explorar as nuances entre quatro papéis essenciais: <strong><em>DevOps, DevSecOps, SRE (Site Reliability Engineering) e Engenheiro de Plataforma</em></strong>. Embora essas funções sejam cruciais para o sucesso das operações de TI, é importante destacar que <strong>nem tudo é 100% certo</strong> no mundo dinâmico da tecnologia. Vamos ver um pouco essas diferenças.</p>
+<p><img src="0_Rg_7vMFtWEDFaBa7.png" alt=""></p>
+<h2 id="devops-a-colaboração-no-centro">DevOps: A Colaboração no Centro</h2>
+<p>O DevOps é como uma cola que une equipes de desenvolvimento e operações. Aqui estão alguns pontos-chave:</p>
+<ul>
+<li>
+<p>**Colaboração: **DevOps enfatiza a colaboração contínua entre equipes de desenvolvimento e operações para garantir entregas de software mais rápidas e confiáveis.</p>
+</li>
+<li>
+<p><strong>Automação:</strong> A automação de processos é uma parte central do DevOps, permitindo a entrega contínua e a implantação automatizada.</p>
+</li>
+<li>
+<p><strong>Cultura:</strong> É uma filosofia que promove uma cultura de aprendizado contínuo e melhoria.</p>
+</li>
+</ul>
+<p><img src="0_gGdbQXh2MHhDQZ2X.png" alt=""></p>
+<h2 id="devsecops-segurança-em-primeiro-lugar">DevSecOps: Segurança em Primeiro Lugar</h2>
+<p>O DevSecOps leva o conceito do DevOps um passo adiante, incorporando segurança desde o início: Isso não quer dizer que não devem trabalhar juntos um DevOps e DevSecOps, na verdade os dois se complementam.</p>
+<ul>
+<li>
+<p><strong>Segurança Integrada:</strong> A segurança é integrada ao ciclo de vida de desenvolvimento, não como uma reflexão tardia.</p>
+</li>
+<li>
+<p><strong>Testes de Segurança:</strong> Ferramentas de automação ajudam a identificar vulnerabilidades e problemas de segurança.</p>
+</li>
+<li>
+<p>**Responsabilidade Compartilhada: **Todos na equipe são responsáveis pela segurança.</p>
+</li>
+</ul>
+<p><img src="0_WGuxH_C1B1sO2Slq.jpg" alt=""></p>
+<h2 id="sre-site-reliability-engineering-mantendo-as-coisas-funcionando">SRE (Site Reliability Engineering): Mantendo as Coisas Funcionando</h2>
+<p>SRE é sobre garantir que sistemas e aplicativos sejam confiáveis e escaláveis:</p>
+<ul>
+<li>
+<p><strong>Confiabilidade:</strong> O foco principal é manter sistemas altamente confiáveis, minimizando interrupções.</p>
+</li>
+<li>
+<p><strong>Engenharia:</strong> Usa princípios de engenharia de software para resolver problemas operacionais.</p>
+</li>
+<li>
+<p>**SLIs, SLOs, SLAs: **Mede a confiabilidade usando indicadores de serviço (SLIs), objetivos de serviço (SLOs) e acordos de nível de serviço (SLAs).</p>
+</li>
+</ul>
+<p><img src="1_VIbxqyQlomcD94tjSWYuQw.png" alt=""></p>
+<h2 id="engenheiro-de-plataforma-habilitando-a-infraestrutura">Engenheiro de Plataforma: Habilitando a Infraestrutura</h2>
+<p>Os Engenheiros de Plataforma são responsáveis pela infraestrutura que suporta aplicativos:</p>
+<ul>
+<li>
+<p>**Infraestrutura como Código (IaC): **Desenvolve e mantém a infraestrutura usando código.</p>
+</li>
+<li>
+<p><strong>Orquestração de Contêineres:</strong> Gerencia contêineres e orquestração para implantação eficiente.</p>
+</li>
+<li>
+<p><strong>Escalabilidade:</strong> Garante que a infraestrutura possa escalar conforme necessário.</p>
+</li>
+</ul>
+<p>Aqui está uma tabela rápida de comparação:</p>
+<pre><code>Papel          | Enfoque Principal              | Ferramentas Comuns
+---------------|--------------------------------|-------------------------------
+DevOps         | Colaboração, Automação         | Jenkins, Ansible, Docker
+DevSecOps      | Segurança Integrada            | OWASP ZAP, Nessus, Vault
+SRE            | Confiabilidade, Engenharia     | Prometheus, Grafana, Kubernetes
+Platform Eng   | Infraestrutura, Escalabilidade | Terraform, Kubernetes, Docker
+</code></pre>
+<blockquote>
+<p>Lembre-se de que, no mundo real, as fronteiras entre esses papéis podem ser borradas, e as organizações adaptam esses conceitos às suas necessidades específicas. O importante é manter o foco na colaboração, na automação e na segurança, independentemente do título que você use.</p>
+</blockquote>
+<p>Neste dinâmico ecossistema, a adaptação é a chave, e <strong>aprender continuamente é essencial</strong>. Espero que esta exploração simplista tenha ajudado a compreender melhor as diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma.</p>
+<p>Se você tiver alguma dúvida ou quiser compartilhar suas experiências, sinta-se à vontade para comentar abaixo. Juntos, continuamos a explorar e evoluir no emocionante mundo da tecnologia!</p>
+</section>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="renatoruis/timdevops.blog"
+    data-repo-id="R_kgDOMbpkjQ"
+    data-category="General"
+    data-category-id="DIC_kwDOMbpkjc4ChNbV"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="pt"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >feito com hugo️️</a
+  >️
+
+</footer>
+
+  </body>
+</html>

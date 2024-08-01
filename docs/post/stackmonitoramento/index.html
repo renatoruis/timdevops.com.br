@@ -1,0 +1,568 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: "
+  lang="pt"
+>
+  <head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD - Tim DevOps</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados)." />
+  <meta name="author" content="Renato Ruis (Tim)" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://timdevops.com.br/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://i.imgur.com/d8VeuPh.jpg" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/github.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/instagram.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/linkedin.svg" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://timdevops.com.br/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://timdevops.com.br/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.129.0">
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD">
+  <meta itemprop="description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).">
+  <meta itemprop="datePublished" content="2023-07-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-07-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="865">
+  
+  <meta property="og:url" content="https://timdevops.com.br/post/stackmonitoramento/">
+  <meta property="og:site_name" content="Tim DevOps">
+  <meta property="og:title" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD">
+  <meta property="og:description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-07-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-07-21T00:00:00+00:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD">
+  <meta name="twitter:description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://timdevops.com.br/post/stackmonitoramento/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    
+
+<header class="mx-auto flex h-20 max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+
+<div class="flex items-center">
+
+  <div
+    class="-ml-1 mr-5 aspect-square w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:bg-white/[15%]" >
+
+    
+    <img
+      class="my-0 h-full w-full rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="https://i.imgur.com/d8VeuPh.jpg"
+      alt="Tim DevOps"
+      />
+    
+  </div>
+
+
+    <a class="-translate-y-[1px] text-2xl" href="https://timdevops.com.br/"
+      >Tim DevOps</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = ''.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home </a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About </a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+
+      
+
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Jul 21, 2023</time>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Renato Ruis (Tim)</span>
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="implantando-prometheus-e-grafana-no-kubernetes-usando-o-argocd">Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD</h2>
+<p><img src="0_nb73iD8C_1wnv6Js.png" alt=""></p>
+<p><strong>Introdução ao Prometheus, Grafana e ArgoCD</strong></p>
+<p><strong>Prometheus</strong> é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.</p>
+<p>Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados). Junto com o serviço complementar <strong>AlertManager</strong>, o Prometheus é uma ferramenta flexível para coleta de métricas e alertas.</p>
+<p><strong>Grafana:</strong> também é um software de código aberto que permite consultar, visualizar, alertar e explorar métricas, logs e rastreamentos onde quer que estejam armazenados.</p>
+<p>Como ferramenta de visualização, o Grafana é um componente popular em stacks de monitoramento, frequentemente usado em combinação com bancos de dados de séries temporais como InfluxDB, Prometheus e Graphite; e outras plataformas de monitoramento como Sensu, Icinga, Checkmk, Zabbix, Netdata e PRTG; SIEMs como Elasticsearch e Splunk; e etc</p>
+<p><img src="https://cdn-images-1.medium.com/max/3770/0*-qWd3Qzj9Ht9YTab.png" alt="Um exemplo de dashboard do grafana monitorando um cluster kubernetes"></p>
+<p>Continuando….</p>
+<p><strong>ArgoCD</strong>: é uma ferramenta declarativa de entrega contínua GitOps para Kubernetes. ArgoCD é implementado como um controlador do Kubernetes que monitora continuamente os aplicativos em execução e compara o estado atual ao estado desejado. Um aplicativo implantado cujo estado atual difere do estado desejado é considerado “fora de sincronia” (OutOfSync).</p>
+<p>**Helm Charts: **Helm ajuda você a gerenciar aplicativos do Kubernetes — Helm Charts ajudam você a definir, instalar e atualizar até mesmo os aplicativos Kubernetes mais complexos. Helm é uma ferramenta de DevOps que simplifica a instalação e o gerenciamento de aplicativos Kubernetes. A ferramenta empacota arquivos de configuração em um formato chamado “charts”.</p>
+<p>Vamos lá!</p>
+<p><strong>Pré-requisitos</strong></p>
+<ul>
+<li>
+<p>ArgoCD instalado em um cluster em execução (se ainda não o fez, consulte <a href="https://argo-cd.readthedocs.io/">esta documentação</a> para configurá-lo).</p>
+</li>
+<li>
+<p>Um repositório do GitHub conectado à aplicação ArgoCD.</p>
+</li>
+</ul>
+<p><strong>Configurando seus manifestos</strong></p>
+<p>Crie 2 arquivos na pasta do repositório que você conectou ao ArgoCD e personalize os seguintes valores usando os Helm Charts globais do Prometheus e Grafana.</p>
+<p><em>Prometheus.yaml</em></p>
+<pre><code>apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: monitoring
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - repoURL: https://github.com/&lt;git-username&gt;/&lt;git-repo&gt;.git
+      targetRevision: HEAD
+      ref: &lt;customizable reference&gt;
+    - repoURL: https://prometheus-community.github.io/helm-charts/
+      chart: prometheus
+      targetRevision: 19.7.2
+      helm:
+        values: |
+            server:
+              service:
+                type: LoadBalancer
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+</code></pre>
+<p><em>O arquivo YAML acima cria o aplicativo Prometheus a partir do Helm Chart do Prometheus e o expõe como um LoadBalancer, juntamente com outros campos personalizáveis. Consulte aqui se precisar de mais valores.</em></p>
+<p>grafana.yaml</p>
+<pre><code>apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: monitoring
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - repoURL:  https://github.com/&lt;git-username&gt;/&lt;git-repo&gt;.git
+    targetRevision: HEAD
+    ref: &lt;customizable reference&gt;
+  - repoURL: https://grafana.github.io/helm-charts
+    chart: grafana
+    targetRevision: 6.52.2
+    helm:
+      values: |
+        service:
+          type: LoadBalancer
+        datasources:
+          datasources.yaml:
+            apiVersion: 1
+            datasources:
+              - name: Prometheus
+                type: prometheus
+                url: http://prometheus-server.monitoring.svc.cluster.local
+                access: proxy
+                isDefault: true
+              - name: loki
+                type: loki
+                url: http://loki.monitoring.svc.cluster.local
+                access: proxy
+        dashboardProviders:
+          dashboardproviders.yaml:
+            apiVersion: 1
+            providers:
+              - name: &quot;default&quot;
+                orgId: 1
+                folder: &quot;&quot;
+                type: file
+                disableDeletion: false
+                editable: true
+                options:
+                  path: /var/lib/grafana/dashboards/default
+        dashboards:
+          default:
+            kubernetes:
+              gnetId: 10000
+              revision: 1
+              datasource: Prometheus
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+</code></pre>
+<p><em>O arquivo YAML acima cria o aplicativo Grafana a partir do Helm Chart do Grafana. Esse arquivo faz mais do que apenas criá-lo e expô-lo como um LoadBalancer. Após expô-lo como um balanceador de carga, ele adiciona duas fontes de dados, que são Loki e Prometheus. Em seguida, ele adiciona um provedor de dashboards e, por fim, adiciona um painel chamado painel 10000. A maioria dessas ações seria feita manualmente, mas com esse arquivo, elas podem ser facilmente declaradas aqui.</em></p>
+<p>Agora que configuramos com sucesso nossos manifestos e garantimos que a pasta do repositório com esses manifestos esteja conectada à nossa aplicação ArgoCD, o próximo passo seria verificar se eles foram implantados com sucesso na aplicação. Caso contrário, só precisamos atualizar ou sincronizar o aplicativo base no ArgoCD em que eles estão e eles deverão ser refletidos.</p>
+<p><strong>Concluíndo</strong></p>
+<p>Pra finalizar, implantar a stack de monitoramento Prometheus e Grafana no Kubernetes usando o GitOps com ArgoCD oferece inúmeras vantagens e simplifica todo o processo de monitoramento. Ao aproveitar o poder do GitOps, as organizações podem alcançar uma observabilidade, escalabilidade e confiabilidade aprimoradas em sua infra Kubernetes.</p>
+<p>A adoção do Prometheus permite uma coleta robusta de métricas, monitoramento e alerta, possibilitando a identificação e resolução proativa de problemas. Com os dashboards e recursos de visualização intuitivos do Grafana, as equipes podem obter insights valiosos sobre o desempenho do sistema e tomar decisões informadas para otimizar a alocação de recursos e melhorar a eficiência geral.</p>
+<p>O ArgoCD atua como uma ferramenta poderosa para implantações orientadas pelo GitOps, garantindo implantações consistentes e auditáveis de aplicativos em clusters Kubernetes. Com o ArgoCD, as organizações podem automatizar o processo de implantação, reduzir erros manuais e manter uma pilha de monitoramento confiável e escalável.</p>
+<p>Em resumo, implantar essa stack vai facilitar muito seu dia a dia :)</p>
+<p>Caso não tenha conseguido ou tenha tido algum problema por favor me procure aqui nos comentários ou no linkedin :)</p>
+<p>ps: este post é uma tradução livre e adaptada do <a href="undefined">Bright Odey</a></p>
+</section>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="renatoruis/timdevops.blog"
+    data-repo-id="R_kgDOMbpkjQ"
+    data-category="General"
+    data-category-id="DIC_kwDOMbpkjc4ChNbV"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="pt"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >feito com hugo️️</a
+  >️
+
+</footer>
+
+  </body>
+</html>

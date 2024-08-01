@@ -1,0 +1,69 @@
+baseURL = 'https://timdevops.com.br/'
+publishDir = "docs"
+LanguageCode = 'pt'
+title = 'Tim DevOps'
+author = "Renato Ruis"
+paginate = 5
+theme = "paper"
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+
+[params]
+  color = 'dark'
+  instagram = 'renatoruis'
+  linkedin = 'renatoruis'
+  github = 'renatoruis'
+
+
+  # home page profile
+  avatar = 'https://i.imgur.com/d8VeuPh.jpg'
+  name = 'Tim DevOps'
+  bio = 'Onde escrevo o que vem na cabeça!'
+
+  # misc
+  disableHLJS = true                        # disable highlight.js
+  disablePostNavigation = true              # disable post navigation
+  monoDarkIcon = true                       # show monochrome dark mode icon
+  math = true                               # enable KaTeX math typesetting globally
+  localKatex = false                        # use local KaTeX js/css instead of CDN
+  favicon = "favicon.ico"                   # customize the default favicon
+  appleTouchIcon = "apple-touch-icon.png"   # customize the default Apple touch icon
+
+  # giscus
+[params.giscus]
+  repo = 'renatoruis/timdevops.blog'
+  repoId = 'R_kgDOMbpkjQ'
+  category = 'General'
+  categoryId = 'DIC_kwDOMbpkjc4ChNbV'
+  mapping = 'pathname'
+  theme = 'light'
+  lang = 'pt'

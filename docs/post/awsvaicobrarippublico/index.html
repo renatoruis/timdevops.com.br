@@ -1,0 +1,456 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: "
+  lang="pt"
+>
+  <head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>AWS Vai cobrar os IPs Públicos - Tim DevOps</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="— — Este é um resumo do post do Jeff Barr
+A partir de 1º de fevereiro de 2024, a AWS vai começar a cobrar $0.005 por hora por cada endereço público IPv4, independentemente se estiverem vinculados a um serviço ou não. Isso vale pra todos os serviços AWS como Amazon EC2, RDS, EKS e outros.
+Sabe por quê? Os endereços IPv4 estão cada vez mais escassos e o custo pra conseguir um endereço público aumentou mais de 300% nos últimos 5 anos." />
+  <meta name="author" content="Renato Ruis (Tim)" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://timdevops.com.br/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://i.imgur.com/d8VeuPh.jpg" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/github.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/instagram.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/linkedin.svg" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://timdevops.com.br/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://timdevops.com.br/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.129.0">
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="AWS Vai cobrar os IPs Públicos">
+  <meta itemprop="description" content="Fica ligado...">
+  <meta itemprop="datePublished" content="2023-08-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-08-01T00:00:00+00:00">
+  <meta itemprop="wordCount" content="321">
+  
+  <meta property="og:url" content="https://timdevops.com.br/post/awsvaicobrarippublico/">
+  <meta property="og:site_name" content="Tim DevOps">
+  <meta property="og:title" content="AWS Vai cobrar os IPs Públicos">
+  <meta property="og:description" content="Fica ligado...">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-08-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-08-01T00:00:00+00:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AWS Vai cobrar os IPs Públicos">
+  <meta name="twitter:description" content="Fica ligado...">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://timdevops.com.br/post/awsvaicobrarippublico/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    
+
+<header class="mx-auto flex h-20 max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+
+<div class="flex items-center">
+
+  <div
+    class="-ml-1 mr-5 aspect-square w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:bg-white/[15%]" >
+
+    
+    <img
+      class="my-0 h-full w-full rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="https://i.imgur.com/d8VeuPh.jpg"
+      alt="Tim DevOps"
+      />
+    
+  </div>
+
+
+    <a class="-translate-y-[1px] text-2xl" href="https://timdevops.com.br/"
+      >Tim DevOps</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = ''.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home </a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About </a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+
+      
+
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">AWS Vai cobrar os IPs Públicos</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Aug 1, 2023</time>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Renato Ruis (Tim)</span>
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="0_l6DH2slO0VPpIGvi.jpg" alt=""></p>
+<p><em>— — Este é um resumo do <a href="https://aws.amazon.com/pt/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/">post</a> do <a href="https://aws.amazon.com/blogs/aws/author/jbarr/">Jeff Barr</a></em></p>
+<p>A partir de 1º de fevereiro de 2024, a AWS vai começar a cobrar <strong>$0.005</strong> por hora por cada endereço público IPv4, independentemente se estiverem vinculados a um serviço ou não. Isso vale pra todos os serviços AWS como Amazon EC2, RDS, EKS e outros.</p>
+<p>Sabe por quê? Os endereços IPv4 estão cada vez mais escassos e o custo pra conseguir um endereço público aumentou mais de 300% nos últimos 5 anos. Então, a ideia é que a gente seja mais econômico no uso de endereços públicos IPv4 e comece a pensar em adotar o IPv6.</p>
+<p>Aqui vai um resumo dos preços no AWS:</p>
+<ul>
+<li>
+<p>Endereços IPv4 públicos em uso: antes era grátis, agora vai ser $0.005 por hora.</p>
+</li>
+<li>
+<p>Endereços Elastic IP adicionais em uma instância EC2 em execução: continua $0.005 por hora.</p>
+</li>
+<li>
+<p>Endereço Elastic IP ocioso na conta: continua $0.005 por hora.</p>
+</li>
+</ul>
+<p><em>Ah, e tem um detalhe importante: <strong>o AWS Free Tier para EC2 vai incluir 750 horas de uso de endereço IPv4 público por mês</strong>, durante os primeiros 12 meses, a partir de 1º de fevereiro de 2024.</em></p>
+<p>E mais, você não será cobrado por endereços IP que você trouxer pro AWS usando o <a href="https://aws.amazon.com/pt/blogs/networking-and-content-delivery/introducing-bring-your-own-ip-byoip-for-amazon-vpc/">Amazon BYOIP</a>.</p>
+<p>Já a partir de hoje, os seus Relatórios de Custo e Uso da AWS vão incluir o uso do endereço IPv4 público. Quando essa mudança de preço entrar em vigor no próximo ano, você também poderá usar o AWS Cost Explorer pra ver e entender melhor o seu uso.</p>
+<p>Pra ajudar a entender e monitorar melhor o uso dos endereços IPv4 públicos, a AWS lançou uma nova ferramenta gratuita chamada <a href="https://docs.aws.amazon.com/pt_br/vpc/latest/ipam/view-public-ip-insights.html">Public IP Insights</a>.</p>
+<p><strong>Então, a dica é:</strong> dê uma olhada nos recursos sobre como usar o IPv6 e tente minimizar o efeito dessa nova cobrança. Você também pode considerar usar o AWS Direct Connect pra configurar uma conexão de rede dedicada à AWS.</p>
+</section>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="renatoruis/timdevops.blog"
+    data-repo-id="R_kgDOMbpkjQ"
+    data-category="General"
+    data-category-id="DIC_kwDOMbpkjc4ChNbV"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="pt"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >feito com hugo️️</a
+  >️
+
+</footer>
+
+  </body>
+</html>

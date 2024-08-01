@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tim DevOps</title>
+    <link>https://timdevops.com.br/</link>
+    <description>Recent content on Tim DevOps</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://timdevops.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4 Dicas para aumentar sua produtividade no terminal Linux</title>
+      <link>https://timdevops.com.br/post/4dicaslinux/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/4dicaslinux/</guid>
+      <description>Hoje em português :) Dicas para aumentar produtividade no terminal Linux&#xA;#1 CTRL+R Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%&#xA;#2 “Pipe e Grep” Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”.</description>
+    </item>
+    <item>
+      <title>Sobre</title>
+      <link>https://timdevops.com.br/about/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/about/</guid>
+      <description>Renato é um desenvolvedor de software e especialista em DevOps com 36 anos, residente por enquanto no Brasil, Com certificações em AWS, Kubernetes entre outras, ele tem vasta experiência em grandes corporações e startups, onde se destaca na criação e otimização de pipelines de integração e entrega contínua. Além de seu trabalho, Renato é um entusiasta por novos desafios, gosta de criar textos e imagens irônicas sobre a vida no escritório e está sempre aprimorando suas habilidades.</description>
+    </item>
+    <item>
+      <title>🚀 Oportunidade de Economizar em Ferramentas de Comunicação! 🚀</title>
+      <link>https://timdevops.com.br/post/zulip/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/zulip/</guid>
+      <description>🚀 Oportunidade de Economizar em Ferramentas de Comunicação! 🚀 Essa ferramenta é TOP! ⚠️ *Primeiro, quero deixar claro: não estou sendo patrocinado por ninguém para falar isso. Eu simplesmente me deparei com uma ferramenta incrível e senti que precisava compartilhar com a comunidade! *⚠️&#xA;🔎 Você está sempre em busca ou precisa de maneiras de cortar custos sem comprometer a qualidade? Se Slack, Teams e outros estão pesando no seu bolso, tenho uma dica dourada para você!</description>
+    </item>
+    <item>
+      <title>Grátis! Treinamentos e materiais</title>
+      <link>https://timdevops.com.br/post/treinamentos/</link>
+      <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/treinamentos/</guid>
+      <description>&lt;p&gt;Minha jornada até aqui foi pavimentada pelo apoio da comunidade, e é hora de retribuir com #gratitude.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EKS Agora Permite a Modificação De Sub Redes E Grupos De Segurança</title>
+      <link>https://timdevops.com.br/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</guid>
+      <description>EKS agora permite a modificação de sub-redes e grupos de segurança finalmente! Fala gente! Para quem trabalha no mundo do EKS, tem novidades. A partir de agora, é possível atualizar as sub-redes e os grupos de segurança associados aos seus clusters EKS existentes. Isso mesmo! FINALMENTE! Se antes você tinha que ficar preso às configurações iniciais ou criar um novo cluster quando algo mudava, agora a vida ficou mais fácil.</description>
+    </item>
+    <item>
+      <title>Use tranquilo o ChatGPT no Trampo</title>
+      <link>https://timdevops.com.br/post/chatgptnotrampo/</link>
+      <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/chatgptnotrampo/</guid>
+      <description>Salve! Desde que o ChatGPT apareceu, a parada mudou completamente. Pra quem tá por fora, essa é a parada revolucionária da OpenAI que chegou em novembro de 2022. Tá ajudando a galera a fazer de TUDO, desde escrever um texto até escrever funçoes lambdas complexas. Mas ó, não vacila com os dados da empresa. Vamos bater um papo sobre como usar essa novidade e, ao mesmo tempo, manter as infos da firma safe.</description>
+    </item>
+    <item>
+      <title>CROC já usou?</title>
+      <link>https://timdevops.com.br/post/croc/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/croc/</guid>
+      <description>Não sei se você já preciso transferir um arquivo de forma rápida, um log, um certificado, uma chave ou algo do tipo, para um amigo, outro datacenter, outra VM outro país haha, o que vem na cabeça? tem muitas ferramentas pra fazer isso algumas com interface, browser e até CLI dependendo do cenário.&#xA;Já precisei fazer isso algumas vezes e do outro lado tinha um Windows, bloqueios, RDP etc etc etc muitas coisas que dificulta isso.</description>
+    </item>
+    <item>
+      <title>Habilidades que todo profissional de TECH precisa</title>
+      <link>https://timdevops.com.br/post/habilidade/</link>
+      <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/habilidade/</guid>
+      <description>Desvendando os segredos além do código: o que realmente faz a diferença na carreira tech!&#xA;Fala gente! Sempre ouvimos falar sobre como é essencial saber programar, conhecer as últimas ferramentas e estar por dentro das novidades. Mas, bora combinar, não é só de código que vive um profissional de tecnologia, certo? Aquelas habilidades que não estão nos livros, mas fazem toda a diferença no dia a dia, são tão valiosas quanto.</description>
+    </item>
+    <item>
+      <title>As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma</title>
+      <link>https://timdevops.com.br/post/diferencadevopsesre/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/diferencadevopsesre/</guid>
+      <description>Salve!&#xA;Hoje, vamos falar do universo da engenharia de software e explorar as nuances entre quatro papéis essenciais: DevOps, DevSecOps, SRE (Site Reliability Engineering) e Engenheiro de Plataforma. Embora essas funções sejam cruciais para o sucesso das operações de TI, é importante destacar que nem tudo é 100% certo no mundo dinâmico da tecnologia. Vamos ver um pouco essas diferenças.&#xA;DevOps: A Colaboração no Centro O DevOps é como uma cola que une equipes de desenvolvimento e operações.</description>
+    </item>
+    <item>
+      <title>AWS Vai cobrar os IPs Públicos</title>
+      <link>https://timdevops.com.br/post/awsvaicobrarippublico/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/awsvaicobrarippublico/</guid>
+      <description>— — Este é um resumo do post do Jeff Barr&#xA;A partir de 1º de fevereiro de 2024, a AWS vai começar a cobrar $0.005 por hora por cada endereço público IPv4, independentemente se estiverem vinculados a um serviço ou não. Isso vale pra todos os serviços AWS como Amazon EC2, RDS, EKS e outros.&#xA;Sabe por quê? Os endereços IPv4 estão cada vez mais escassos e o custo pra conseguir um endereço público aumentou mais de 300% nos últimos 5 anos.</description>
+    </item>
+    <item>
+      <title>Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD</title>
+      <link>https://timdevops.com.br/post/stackmonitoramento/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/stackmonitoramento/</guid>
+      <description>Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD&#xA;Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.&#xA;Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).</description>
+    </item>
+    <item>
+      <title>CKA Consegui Com Dicas Importantes</title>
+      <link>https://timdevops.com.br/post/cka-consegui-com-dicas-importantes/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/post/cka-consegui-com-dicas-importantes/</guid>
+      <description>CKA Consegui com dicas importantes Hey \o Quero compartilhar um pouco de como consegui essa certificação que é muito requisitada/cobiçada&#xA;Vou ser simples e objetivo direto ao ponto, pois sei que se você está lendo isso, provavelmente, já leu muita coisa sobre CKA na internet.&#xA;Curiosidades sobre o exame **Informaçòes oficiais: **Você provavelmente já leu no site oficial sobre o exame em si, se não, você precisa ler tudo sobre aqui de verdade leia e releia, leia as letrinha pequenas e e esse pdf aqui também, mas vou deixar pontos que acho importante e que aconteceu comigo.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://timdevops.com.br/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/search/</guid>
+      <description> Search </description>
+    </item>
+  </channel>
+</rss>

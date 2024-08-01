@@ -1,0 +1,453 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: "
+  lang="pt"
+>
+  <head>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>4 Dicas para aumentar sua produtividade no terminal Linux - Tim DevOps</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Hoje em português :) Dicas para aumentar produtividade no terminal Linux
+#1 CTRL&#43;R Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%
+#2 “Pipe e Grep” Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”." />
+  <meta name="author" content="Renato Ruis (Tim)" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://timdevops.com.br/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/theme.svg" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://i.imgur.com/d8VeuPh.jpg" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/github.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/instagram.svg" />
+  
+  <link rel="preload" as="image" href="https://timdevops.com.br/linkedin.svg" />
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://timdevops.com.br/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://timdevops.com.br/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.129.0">
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="4 Dicas para aumentar sua produtividade no terminal Linux">
+  <meta itemprop="description" content="Hoje em português :) Dicas para aumentar produtividade no terminal Linux
+#1 CTRL&#43;R Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%
+#2 “Pipe e Grep” Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”.">
+  <meta itemprop="datePublished" content="2024-07-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-07-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="153">
+  
+  <meta property="og:url" content="https://timdevops.com.br/post/4dicaslinux/">
+  <meta property="og:site_name" content="Tim DevOps">
+  <meta property="og:title" content="4 Dicas para aumentar sua produtividade no terminal Linux">
+  <meta property="og:description" content="Hoje em português :) Dicas para aumentar produtividade no terminal Linux
+#1 CTRL&#43;R Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%
+#2 “Pipe e Grep” Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”.">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-07-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-29T00:00:00+00:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="4 Dicas para aumentar sua produtividade no terminal Linux">
+  <meta name="twitter:description" content="Hoje em português :) Dicas para aumentar produtividade no terminal Linux
+#1 CTRL&#43;R Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%
+#2 “Pipe e Grep” Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”.">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://timdevops.com.br/post/4dicaslinux/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    
+
+<header class="mx-auto flex h-20 max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+
+<div class="flex items-center">
+
+  <div
+    class="-ml-1 mr-5 aspect-square w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:bg-white/[15%]" >
+
+    
+    <img
+      class="my-0 h-full w-full rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="https://i.imgur.com/d8VeuPh.jpg"
+      alt="Tim DevOps"
+      />
+    
+  </div>
+
+
+    <a class="-translate-y-[1px] text-2xl" href="https://timdevops.com.br/"
+      >Tim DevOps</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = ''.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/"
+        >Home </a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About </a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./instagram.svg)"
+        href="https://instagram.com/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        instagram
+      </a>
+
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/renatoruis"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+
+      
+
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">4 Dicas para aumentar sua produtividade no terminal Linux</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Jul 29, 2024</time>
+      
+      
+      
+      
+      <span class="mx-1">&middot;</span>
+      <span>Renato Ruis (Tim)</span>
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="1_78yvLHhmmVCP_5x5qNNjnA.gif" alt=""></p>
+<p>Hoje em português :)
+Dicas para aumentar produtividade no terminal Linux</p>
+<h2 id="1-ctrlr"><strong>#1 CTRL+R</strong></h2>
+<p>Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%</p>
+<h2 id="2-pipe-e-grep"><strong>#2 “Pipe e Grep”</strong></h2>
+<p>Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”.
+<a href="https://javarevisited.blogspot.com/2011/06/10-examples-of-grep-command-in-unix-and.html#axzz6qVfxXvpN">10 exemplode de uso do grep</a></p>
+<h2 id="3-tab--autocomplete"><strong>#3 Tab + Autocomplete</strong></h2>
+<p>O próprio BASH carrega um autocomplete de comando nativos do Linux, se voce usa outras ferramentas como por exemplo KUBECTL, TERRAFORM, VAGRANT e outras, elas terão augum script que vai te auxiliar com o autocomplete</p>
+<h2 id="3-awk"><strong>#3 AWK</strong></h2>
+<p>O AWK é um pouco mais complexo mas tem muitas features simples que ajudam demais no dia a dia, veja <a href="https://renatoruisdevops.medium.com/voc%C3%AA-sabia-que-o-awk-faz-isso-5-dicas-para-iniciantes-dab712fe5d48">esse post que fiz</a> sobre ele</p>
+</section>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="renatoruis/timdevops.blog"
+    data-repo-id="R_kgDOMbpkjQ"
+    data-category="General"
+    data-category-id="DIC_kwDOMbpkjc4ChNbV"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="pt"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >feito com hugo️️</a
+  >️
+
+</footer>
+
+  </body>
+</html>
