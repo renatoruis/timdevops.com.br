@@ -38,7 +38,7 @@ series = "series"
 
 
 [params]
-  color = 'light'
+  color = 'gray'
   instagram = 'renatoruis'
   linkedin = 'renatoruis'
   github = 'renatoruis'
@@ -65,5 +65,5 @@ series = "series"
   category = 'General'
   categoryId = 'DIC_kwDOMbpkjc4ChNbV'
   mapping = 'pathname'
-  theme = 'light'
+  theme = 'gray'
   lang = 'pt'

@@ -11,19 +11,19 @@
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
 {{ end }}
 
-<div class="mt-4 mb-4 p-24 flex justify-center">
+<div class="flex justify-center p-24 mt-4 mb-4">
   <div class="w-full max-w-lg">
     <form id="search-form" class="flex">
       <input
         type="text"
         id="search-input"
-        class="w-full px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        placeholder="Buscar..."
+        class="w-full"
+        placeholder="Buscar... "
       />
     </form>
 <script src="/js/search.js"></script>
 <br>
-<div id="search-results" class="p-4"></div>
+<div id="search-results" style="display: none;"></div>
 
 <br>
 <!-- Articles -->
@@ -32,7 +32,7 @@
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   {{ if gt .Weight 0 }}
-  <span class="mb-1 inline-block text-xs tracking-wider text-orange-500"
+  <span class="inline-block mb-1 text-xs tracking-wider text-orange-500"
     >Featured</span
   >
   {{ end }}
@@ -46,12 +46,12 @@
 
 <!-- Main Nav -->
 {{ if gt $paginator.TotalPages 1 }}
-<nav class="mt-16 flex">
+<nav class="flex mt-16">
   {{ if $paginator.HasPrev }}
   <a class="btn" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
   {{ end }}<!---->
   {{ if $paginator.HasNext }}
-  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}"
+  <a class="ml-auto btn" href="{{ $paginator.Next.URL }}"
     >{{ i18n "next_page" }} →</a
   >
   {{ end }}

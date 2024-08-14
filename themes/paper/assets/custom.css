@@ -1,1 +1,35 @@
 /* Place custom css here. */
+
+#search-input {
+    background-color: transparent;
+    border-bottom: #7a7a7a;
+    border-radius: 13px;
+    padding: 10px 10px;
+    line-height: 1.5;
+    color: #7a7a7a;
+    width: 100%;
+}
+
+#search-input:focus {
+    outline: none;
+    border-bottom: #7a7a7a;
+    color: #7a7a7a;
+    font-size: 2em;
+}
+
+#search-results {
+    background-color: transparent;
+    border-color: #7a7a7a;
+    border-width: 1px;
+    border-radius: 13px;
+    padding: 10px 10px;
+    line-height: 1.5;
+    color: #7a7a7a;
+    width: 100%;
+}
+
+#search-results a {
+    color: #7a7a7a;
+    text-decoration: none;
+    padding-top: 8px;
+}

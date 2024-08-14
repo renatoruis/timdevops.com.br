@@ -42,7 +42,7 @@
 
 <html
   class="not-ready lg:text-base"
-  style="--bg: #fff"
+  style="--bg: #fbfbfb"
   lang="pt"
 >
   <head>
@@ -266,7 +266,7 @@
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#fff'.replace(/"/g, '');
+    const lightBg = '#fbfbfb'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
@@ -375,19 +375,19 @@
 
 
 
-<div class="mt-4 mb-4 p-24 flex justify-center">
+<div class="flex justify-center p-24 mt-4 mb-4">
   <div class="w-full max-w-lg">
     <form id="search-form" class="flex">
       <input
         type="text"
         id="search-input"
-        class="w-full px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        placeholder="Buscar..."
+        class="w-full"
+        placeholder="Buscar... "
       />
     </form>
 <script src="/js/search.js"></script>
 <br>
-<div id="search-results" class="p-4"></div>
+<div id="search-results" style="display: none;"></div>
 
 <br>
 
@@ -445,10 +445,10 @@
 
 
 
-<nav class="mt-16 flex">
+<nav class="flex mt-16">
   
   
-  <a class="btn ml-auto" href="/page/2/"
+  <a class="ml-auto btn" href="/page/2/"
     >Next Page →</a
   >
   
@@ -464,10 +464,7 @@
   <div class="mr-auto">
     &copy; 2024
     <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
-  </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >feito com hugo️️</a
-  >️
+  </div>️
 
 </footer>
 
