@@ -42,7 +42,7 @@
 
 <html
   class="not-ready lg:text-base"
-  style="--bg: "
+  style="--bg: #fff"
   lang="pt"
 >
   <head>
@@ -152,7 +152,7 @@ Já precisei fazer isso algumas vezes e do outro lado tinha um Windows, bloqueio
   
   <link
     rel="icon"
-    href="https://timdevops.com.br/favicon.ico"
+    href="https://timdevops.com.br/favicon.png"
   />
   <link
     rel="apple-touch-icon"
@@ -256,7 +256,7 @@ Já precisei fazer isso algumas vezes e do outro lado tinha um Windows, bloqueio
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = ''.replace(/"/g, '');
+    const lightBg = '#fff'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');

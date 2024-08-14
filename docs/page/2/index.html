@@ -42,7 +42,7 @@
 
 <html
   class="not-ready lg:text-base"
-  style="--bg: "
+  style="--bg: #fff"
   lang="pt"
 >
   <head>
@@ -155,7 +155,7 @@
   
   <link
     rel="icon"
-    href="https://timdevops.com.br/favicon.ico"
+    href="https://timdevops.com.br/favicon.png"
   />
   <link
     rel="apple-touch-icon"
@@ -266,7 +266,7 @@
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = ''.replace(/"/g, '');
+    const lightBg = '#fff'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
