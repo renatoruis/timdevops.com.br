@@ -23,4 +23,4 @@ de três filhos, Raimy, Heitor e Isa amora, e é casado com o amor de sua vida
 Renata (olha que conhecidência)
 
 <!-- image family.png -->
-<img src="/images/family.png" class="img-tim" style="width: 100%; border-radius: 13px"/>
+<img src="/images/family.png" class="img-tim" style="width: 100%; border-radius: 13px" alt="imagem do Renato Tim e sua família" />
