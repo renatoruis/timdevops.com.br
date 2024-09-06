@@ -2,82 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://timdevops.com.br/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://timdevops.com.br/tags/aws/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/css/</loc>
+    <loc>https://timdevops.com.br/tags/aws-update/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/html/</loc>
+    <loc>https://timdevops.com.br/categories/aws-updates/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/index/</loc>
+    <loc>https://timdevops.com.br/categories/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
+    <loc>https://timdevops.com.br/tags/cloud/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://timdevops.com.br/categories/cloud-computing/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://timdevops.com.br/tags/devops/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/syntax/</loc>
+    <loc>https://timdevops.com.br/categories/devops-dicas/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://timdevops.com.br/tags/index/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/themes/</loc>
+    <loc>https://timdevops.com.br/tags/infraestrutura/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/themes-guide/</loc>
+    <loc>https://timdevops.com.br/categories/infraestrutura-e-performance/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</loc>
+    <loc>https://timdevops.com.br/tags/network-load-balancer/</loc>
     <lastmod>2024-09-06T15:23:31-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/4dicaslinux/</loc>
+    <loc>https://timdevops.com.br/tags/nlb/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/tags/performance/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/post/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/tags/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/tags/tcp-timeout/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/tags/timeout-configurations/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</loc>
+    <lastmod>2024-09-06T15:23:31-03:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/post/4dicaslinux/</loc>
     <lastmod>2024-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://timdevops.com.br/about/</loc>
     <lastmod>2024-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/zulip/</loc>
+    <loc>https://timdevops.com.br/post/zulip/</loc>
     <lastmod>2024-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/treinamentos/</loc>
+    <loc>https://timdevops.com.br/post/treinamentos/</loc>
     <lastmod>2024-06-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</loc>
+    <loc>https://timdevops.com.br/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/treinamentos/</loc>
+    <loc>https://timdevops.com.br/tags/treinamentos/</loc>
     <lastmod>2023-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/chatgptnotrampo/</loc>
+    <loc>https://timdevops.com.br/post/chatgptnotrampo/</loc>
     <lastmod>2023-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/croc/</loc>
+    <loc>https://timdevops.com.br/post/croc/</loc>
     <lastmod>2023-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/habilidade/</loc>
+    <loc>https://timdevops.com.br/post/habilidade/</loc>
     <lastmod>2023-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/diferencadevopsesre/</loc>
+    <loc>https://timdevops.com.br/post/diferencadevopsesre/</loc>
     <lastmod>2023-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/awsvaicobrarippublico/</loc>
+    <loc>https://timdevops.com.br/post/awsvaicobrarippublico/</loc>
     <lastmod>2023-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/stackmonitoramento/</loc>
+    <loc>https://timdevops.com.br/post/stackmonitoramento/</loc>
     <lastmod>2023-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/cka-consegui-com-dicas-importantes/</loc>
+    <loc>https://timdevops.com.br/post/cka-consegui-com-dicas-importantes/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://timdevops.com.br/series/</loc>
   </url>
 </urlset>
