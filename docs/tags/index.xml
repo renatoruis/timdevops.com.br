@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tim DevOps</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://timdevops.com.br/tags/</link>
     <description>Recent content in Tags on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Index</title>
-      <link>http://localhost:1313/tags/index/</link>
+      <link>https://timdevops.com.br/tags/index/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/index/</guid>
+      <guid>https://timdevops.com.br/tags/index/</guid>
       <description></description>
     </item>
     <item>
       <title>Treinamentos</title>
-      <link>http://localhost:1313/tags/treinamentos/</link>
+      <link>https://timdevops.com.br/tags/treinamentos/</link>
       <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/treinamentos/</guid>
+      <guid>https://timdevops.com.br/tags/treinamentos/</guid>
       <description></description>
     </item>
   </channel>

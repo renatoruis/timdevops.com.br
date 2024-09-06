@@ -45,7 +45,7 @@
   style="--bg: #fbfbfb"
   lang="pt"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   
 
   <meta charset="utf-8" />
@@ -58,12 +58,25 @@
   
   <title>Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD - Tim DevOps</title>
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N9ZWDZDR');</script>
-  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYJ736YZMV"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BYJ736YZMV');
+      </script>
+
+      
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N9ZWDZDR');</script>
+      
+
+
   
   <meta name="theme-color" />
 
@@ -83,14 +96,14 @@ Prometheus é um software de código aberto que coleta métricas de alvos por me
   
   
   
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="https://timdevops.com.br/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/theme.svg" />
+  <link rel="preload" as="image" href="https://timdevops.com.br/theme.svg" />
 
   
   
@@ -102,11 +115,11 @@ Prometheus é um software de código aberto que coleta métricas de alvos por me
 
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  <link rel="preload" as="image" href="https://timdevops.com.br/github.svg" />
   
-  <link rel="preload" as="image" href="http://localhost:1313/instagram.svg" />
+  <link rel="preload" as="image" href="https://timdevops.com.br/instagram.svg" />
   
-  <link rel="preload" as="image" href="http://localhost:1313/linkedin.svg" />
+  <link rel="preload" as="image" href="https://timdevops.com.br/linkedin.svg" />
   
   
 
@@ -159,17 +172,58 @@ Prometheus é um software de código aberto que coleta métricas de alvos por me
   
   <link
     rel="icon"
-    href="http://localhost:1313/favicon.png"
+    href="https://timdevops.com.br/favicon.png"
   />
   <link
     rel="apple-touch-icon"
-    href="http://localhost:1313/apple-touch-icon.png"
+    href="https://timdevops.com.br/apple-touch-icon.png"
   />
 
   
   <meta name="generator" content="Hugo 0.129.0">
 
   
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD">
+  <meta itemprop="description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).">
+  <meta itemprop="datePublished" content="2023-07-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-07-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="865">
+  
+  <meta property="og:url" content="https://timdevops.com.br/post/stackmonitoramento/">
+  <meta property="og:site_name" content="Tim DevOps">
+  <meta property="og:title" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD">
+  <meta property="og:description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-07-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-07-21T00:00:00+00:00">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD">
+  <meta name="twitter:description" content="Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD Introdução ao Prometheus, Grafana e ArgoCD
+Prometheus é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.
+Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados).">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://timdevops.com.br/post/stackmonitoramento/" />
   
   
 </head>
@@ -199,7 +253,7 @@ Prometheus é um software de código aberto que coleta métricas de alvos por me
   </div>
 
 
-    <a class="-translate-y-[1px] text-2xl" href="http://localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl" href="https://timdevops.com.br/"
       >Tim DevOps</a
     >
     <div
@@ -525,7 +579,7 @@ spec:
 >
   <div class="mr-auto">
     &copy; 2024
-    <a class="link" href="http://localhost:1313/">Tim DevOps</a>
+    <a class="link" href="https://timdevops.com.br/">Tim DevOps</a>
   </div>️
 
 </footer>
