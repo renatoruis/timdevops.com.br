@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  localStorage.setItem("dark", "true");
   const searchInput = document.getElementById("search-input");
   const searchResults = document.getElementById("search-results");
 
