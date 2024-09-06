@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Tim DevOps</title>
-    <link>https://timdevops.com.br/series/</link>
+    <link>http://localhost:1313/series/</link>
     <description>Recent content in Series on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <atom:link href="https://timdevops.com.br/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Sep 2024 15:23:31 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Themes Guide</title>
+      <link>http://localhost:1313/series/themes-guide/</link>
+      <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
+      <guid>http://localhost:1313/series/themes-guide/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

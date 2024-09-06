@@ -8,17 +8,14 @@ comments = false
 +++
 
 Renato é um desenvolvedor de software e especialista em DevOps com 36 anos,
-residente por enquanto no Brasil, Com certificações em AWS, Kubernetes entre
+residente por enquanto no Brasil, Com certificações em AWS, Kubernetes, Oracle entre
 outras, ele tem vasta experiência em grandes corporações e startups, onde se
-destaca na criação e otimização de pipelines de integração e entrega contínua.
+destaca na criação e otimização de pipelines de integração e entrega contínua,
+Arquitetura e desenvolvimento de ambientes cloud e multicloud.
 
 Além de seu trabalho, Renato é um entusiasta por novos desafios, gosta de criar
 textos e imagens irônicas sobre a vida no escritório e está sempre aprimorando
 suas habilidades.
-
-Ele também está desenvolvendo um PDI para se tornar uma
-referência técnica externa em nome da sua empresa e está investindo tempo para
-aprender novas tecnologias.
 
 Renato, conhecido nas redes sociais como **Tim
 DevOps**, administra um blog onde compartilha seu conhecimento. Ele Cristão, Pai

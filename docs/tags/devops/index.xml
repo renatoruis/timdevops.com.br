@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on Tim DevOps</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in DevOps on Tim DevOps</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Fri, 06 Sep 2024 15:23:31 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🙄 Finalmente AWS NLB Com Ajuste De Timeout</title>
+      <link>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
+      <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
+      <guid>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
+      <description>Sabe aquela funcionalidade que você pediu há anos e que achava que nunca ia chegar? Pois é, a AWS finalmente entregou! Agora, o Network Load Balancer (NLB) permite configurar o timeout de inatividade para conexões TCP. Antes, o valor era fixo em 350 segundos, o que dava alguma dor de cabeça em aplicações com tráfego de longa duração, como serviços de streaming, bancos de dados e até sistemas ERP.&#xA;Mas depois de um longo e tenebroso inverno, a AWS decidiu por algum motivo 🙄.</description>
+    </item>
+  </channel>
+</rss>
