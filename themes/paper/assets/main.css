@@ -445,6 +445,7 @@ img,
 video {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */

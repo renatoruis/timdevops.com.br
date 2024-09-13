@@ -20,7 +20,6 @@ categories = [
   "Oracle",
 ]
 
-
 +++
 
 ![1Z0-1085-24 Oracle Cloud Infrastructure 2024 Foundations Associate ](OCI.png)
