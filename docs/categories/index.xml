@@ -2,38 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Tim DevOps</title>
-    <link>https://timdevops.com.br/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <lastBuildDate>Fri, 06 Sep 2024 15:23:31 -0300</lastBuildDate>
-    <atom:link href="https://timdevops.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Sep 2024 19:14:23 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certificações</title>
+      <link>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</link>
+      <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
+      <guid>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>http://localhost:1313/categories/cloud/</link>
+      <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
+      <guid>http://localhost:1313/categories/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle</title>
+      <link>http://localhost:1313/categories/oracle/</link>
+      <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
+      <guid>http://localhost:1313/categories/oracle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tecnologia</title>
+      <link>http://localhost:1313/categories/tecnologia/</link>
+      <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
+      <guid>http://localhost:1313/categories/tecnologia/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AWS Updates</title>
-      <link>https://timdevops.com.br/categories/aws-updates/</link>
+      <link>http://localhost:1313/categories/aws-updates/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/categories/aws-updates/</guid>
+      <guid>http://localhost:1313/categories/aws-updates/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud Computing</title>
-      <link>https://timdevops.com.br/categories/cloud-computing/</link>
+      <link>http://localhost:1313/categories/cloud-computing/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/categories/cloud-computing/</guid>
+      <guid>http://localhost:1313/categories/cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps Dicas</title>
-      <link>https://timdevops.com.br/categories/devops-dicas/</link>
+      <link>http://localhost:1313/categories/devops-dicas/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/categories/devops-dicas/</guid>
+      <guid>http://localhost:1313/categories/devops-dicas/</guid>
       <description></description>
     </item>
     <item>
       <title>Infraestrutura E Performance</title>
-      <link>https://timdevops.com.br/categories/infraestrutura-e-performance/</link>
+      <link>http://localhost:1313/categories/infraestrutura-e-performance/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/categories/infraestrutura-e-performance/</guid>
+      <guid>http://localhost:1313/categories/infraestrutura-e-performance/</guid>
       <description></description>
     </item>
   </channel>

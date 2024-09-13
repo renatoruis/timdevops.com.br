@@ -21,9 +21,11 @@
 
   <section>{{ .Content }}</section>
 
+  {{ partial "share-buttons.html" . }}
+
   <!-- Post Tags -->
   {{ if .Params.tags }}
-  <footer class="mt-12 flex flex-wrap">
+  <footer class="flex flex-wrap mt-12">
     {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
     <a
       class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline dark:bg-white/[8%]"
@@ -109,7 +111,7 @@
 
   <!-- giscus comment -->
   {{ if and site.Params.giscus.repo (not (eq .Params.comments false)) }}
-  <div class="giscus mt-24"></div>
+  <div class="mt-24 giscus"></div>
   <script
     src="https://giscus.app/client.js"
     data-repo="{{ site.Params.giscus.repo }}"
