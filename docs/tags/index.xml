@@ -2,143 +2,143 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tim DevOps</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://timdevops.com.br/tags/</link>
     <description>Recent content in Tags on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Fri, 13 Sep 2024 19:14:23 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Certificação Gratuita</title>
-      <link>http://localhost:1313/tags/certifica%C3%A7%C3%A3o-gratuita/</link>
+      <link>https://timdevops.com.br/tags/certifica%C3%A7%C3%A3o-gratuita/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/certifica%C3%A7%C3%A3o-gratuita/</guid>
+      <guid>https://timdevops.com.br/tags/certifica%C3%A7%C3%A3o-gratuita/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud Computing</title>
-      <link>http://localhost:1313/tags/cloud-computing/</link>
+      <link>https://timdevops.com.br/tags/cloud-computing/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/cloud-computing/</guid>
+      <guid>https://timdevops.com.br/tags/cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Dicas De Certificação</title>
-      <link>http://localhost:1313/tags/dicas-de-certifica%C3%A7%C3%A3o/</link>
+      <link>https://timdevops.com.br/tags/dicas-de-certifica%C3%A7%C3%A3o/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/dicas-de-certifica%C3%A7%C3%A3o/</guid>
+      <guid>https://timdevops.com.br/tags/dicas-de-certifica%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Exame Não Supervisionado</title>
-      <link>http://localhost:1313/tags/exame-n%C3%A3o-supervisionado/</link>
+      <link>https://timdevops.com.br/tags/exame-n%C3%A3o-supervisionado/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/exame-n%C3%A3o-supervisionado/</guid>
+      <guid>https://timdevops.com.br/tags/exame-n%C3%A3o-supervisionado/</guid>
       <description></description>
     </item>
     <item>
       <title>Index</title>
-      <link>http://localhost:1313/tags/index/</link>
+      <link>https://timdevops.com.br/tags/index/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/index/</guid>
+      <guid>https://timdevops.com.br/tags/index/</guid>
       <description></description>
     </item>
     <item>
       <title>OCI 2024 Foundations Associate</title>
-      <link>http://localhost:1313/tags/oci-2024-foundations-associate/</link>
+      <link>https://timdevops.com.br/tags/oci-2024-foundations-associate/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/oci-2024-foundations-associate/</guid>
+      <guid>https://timdevops.com.br/tags/oci-2024-foundations-associate/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle Cloud</title>
-      <link>http://localhost:1313/tags/oracle-cloud/</link>
+      <link>https://timdevops.com.br/tags/oracle-cloud/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/oracle-cloud/</guid>
+      <guid>https://timdevops.com.br/tags/oracle-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle University</title>
-      <link>http://localhost:1313/tags/oracle-university/</link>
+      <link>https://timdevops.com.br/tags/oracle-university/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/tags/oracle-university/</guid>
+      <guid>https://timdevops.com.br/tags/oracle-university/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>http://localhost:1313/tags/aws/</link>
+      <link>https://timdevops.com.br/tags/aws/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/aws/</guid>
+      <guid>https://timdevops.com.br/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS Update</title>
-      <link>http://localhost:1313/tags/aws-update/</link>
+      <link>https://timdevops.com.br/tags/aws-update/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/aws-update/</guid>
+      <guid>https://timdevops.com.br/tags/aws-update/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/tags/cloud/</link>
+      <link>https://timdevops.com.br/tags/cloud/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/cloud/</guid>
+      <guid>https://timdevops.com.br/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://timdevops.com.br/tags/devops/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://timdevops.com.br/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Infraestrutura</title>
-      <link>http://localhost:1313/tags/infraestrutura/</link>
+      <link>https://timdevops.com.br/tags/infraestrutura/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/infraestrutura/</guid>
+      <guid>https://timdevops.com.br/tags/infraestrutura/</guid>
       <description></description>
     </item>
     <item>
       <title>Network Load Balancer</title>
-      <link>http://localhost:1313/tags/network-load-balancer/</link>
+      <link>https://timdevops.com.br/tags/network-load-balancer/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/network-load-balancer/</guid>
+      <guid>https://timdevops.com.br/tags/network-load-balancer/</guid>
       <description></description>
     </item>
     <item>
       <title>NLB</title>
-      <link>http://localhost:1313/tags/nlb/</link>
+      <link>https://timdevops.com.br/tags/nlb/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/nlb/</guid>
+      <guid>https://timdevops.com.br/tags/nlb/</guid>
       <description></description>
     </item>
     <item>
       <title>Performance</title>
-      <link>http://localhost:1313/tags/performance/</link>
+      <link>https://timdevops.com.br/tags/performance/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/performance/</guid>
+      <guid>https://timdevops.com.br/tags/performance/</guid>
       <description></description>
     </item>
     <item>
       <title>TCP Timeout</title>
-      <link>http://localhost:1313/tags/tcp-timeout/</link>
+      <link>https://timdevops.com.br/tags/tcp-timeout/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/tcp-timeout/</guid>
+      <guid>https://timdevops.com.br/tags/tcp-timeout/</guid>
       <description></description>
     </item>
     <item>
       <title>Timeout Configurations</title>
-      <link>http://localhost:1313/tags/timeout-configurations/</link>
+      <link>https://timdevops.com.br/tags/timeout-configurations/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/tags/timeout-configurations/</guid>
+      <guid>https://timdevops.com.br/tags/timeout-configurations/</guid>
       <description></description>
     </item>
     <item>
       <title>Treinamentos</title>
-      <link>http://localhost:1313/tags/treinamentos/</link>
+      <link>https://timdevops.com.br/tags/treinamentos/</link>
       <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/treinamentos/</guid>
+      <guid>https://timdevops.com.br/tags/treinamentos/</guid>
       <description></description>
     </item>
   </channel>

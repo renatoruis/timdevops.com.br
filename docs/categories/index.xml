@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Tim DevOps</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://timdevops.com.br/categories/</link>
     <description>Recent content in Categories on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Fri, 13 Sep 2024 19:14:23 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Certificações</title>
-      <link>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</link>
+      <link>https://timdevops.com.br/categories/certifica%C3%A7%C3%B5es/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</guid>
+      <guid>https://timdevops.com.br/categories/certifica%C3%A7%C3%B5es/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/categories/cloud/</link>
+      <link>https://timdevops.com.br/categories/cloud/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/categories/cloud/</guid>
+      <guid>https://timdevops.com.br/categories/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle</title>
-      <link>http://localhost:1313/categories/oracle/</link>
+      <link>https://timdevops.com.br/categories/oracle/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/categories/oracle/</guid>
+      <guid>https://timdevops.com.br/categories/oracle/</guid>
       <description></description>
     </item>
     <item>
       <title>Tecnologia</title>
-      <link>http://localhost:1313/categories/tecnologia/</link>
+      <link>https://timdevops.com.br/categories/tecnologia/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/categories/tecnologia/</guid>
+      <guid>https://timdevops.com.br/categories/tecnologia/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS Updates</title>
-      <link>http://localhost:1313/categories/aws-updates/</link>
+      <link>https://timdevops.com.br/categories/aws-updates/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/categories/aws-updates/</guid>
+      <guid>https://timdevops.com.br/categories/aws-updates/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud Computing</title>
-      <link>http://localhost:1313/categories/cloud-computing/</link>
+      <link>https://timdevops.com.br/categories/cloud-computing/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/categories/cloud-computing/</guid>
+      <guid>https://timdevops.com.br/categories/cloud-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps Dicas</title>
-      <link>http://localhost:1313/categories/devops-dicas/</link>
+      <link>https://timdevops.com.br/categories/devops-dicas/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/categories/devops-dicas/</guid>
+      <guid>https://timdevops.com.br/categories/devops-dicas/</guid>
       <description></description>
     </item>
     <item>
       <title>Infraestrutura E Performance</title>
-      <link>http://localhost:1313/categories/infraestrutura-e-performance/</link>
+      <link>https://timdevops.com.br/categories/infraestrutura-e-performance/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/categories/infraestrutura-e-performance/</guid>
+      <guid>https://timdevops.com.br/categories/infraestrutura-e-performance/</guid>
       <description></description>
     </item>
   </channel>
