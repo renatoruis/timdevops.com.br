@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Infraestrutura on Tim DevOps</title>
-    <link>http://localhost:1313/tags/infraestrutura/</link>
+    <link>https://timdevops.com.br/tags/infraestrutura/</link>
     <description>Recent content in Infraestrutura on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/infraestrutura/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/tags/infraestrutura/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sincronizando registros Cloudflare com DNS do Active Directory</title>
-      <link>http://localhost:1313/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</link>
+      <link>https://timdevops.com.br/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</guid>
+      <guid>https://timdevops.com.br/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</guid>
       <description>Trabalhar com ambientes híbridos — onde parte da infraestrutura roda local (on-premises) e outra parte já está na nuvem — traz alguns desafios que não estão nos manuais. Um deles: DNS inconsistente entre ambientes.&#xA;O cenário Trabalhei num projeto que tinha bastante legado. Coisa fina: Active Directory rodando DNS interno, várias zonas internas, e aquele jeitão tradicional de TI raiz. Até aí tudo certo.&#xA;Mas no meio do caminho, as coisas mudaram&amp;hellip;</description>
     </item>
     <item>
       <title>🙄 Finalmente AWS NLB Com Ajuste De Timeout</title>
-      <link>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
+      <link>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
+      <guid>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
       <description>Sabe aquela funcionalidade que você pediu há anos e que achava que nunca ia chegar? Pois é, a AWS finalmente entregou! Agora, o Network Load Balancer (NLB) permite configurar o timeout de inatividade para conexões TCP. Antes, o valor era fixo em 350 segundos, o que dava alguma dor de cabeça em aplicações com tráfego de longa duração, como serviços de streaming, bancos de dados e até sistemas ERP.&#xA;Mas depois de um longo e tenebroso inverno, a AWS decidiu por algum motivo 🙄.</description>
     </item>
   </channel>
