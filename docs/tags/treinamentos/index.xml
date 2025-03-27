@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Treinamentos on Tim DevOps</title>
-    <link>https://timdevops.com.br/tags/treinamentos/</link>
+    <link>http://localhost:1313/tags/treinamentos/</link>
     <description>Recent content in Treinamentos on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Thu, 23 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://timdevops.com.br/tags/treinamentos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/treinamentos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use tranquilo o ChatGPT no Trampo</title>
-      <link>https://timdevops.com.br/post/chatgptnotrampo/</link>
+      <link>http://localhost:1313/post/chatgptnotrampo/</link>
       <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://timdevops.com.br/post/chatgptnotrampo/</guid>
+      <guid>http://localhost:1313/post/chatgptnotrampo/</guid>
       <description>Salve! Desde que o ChatGPT apareceu, a parada mudou completamente. Pra quem tá por fora, essa é a parada revolucionária da OpenAI que chegou em novembro de 2022. Tá ajudando a galera a fazer de TUDO, desde escrever um texto até escrever funçoes lambdas complexas. Mas ó, não vacila com os dados da empresa. Vamos bater um papo sobre como usar essa novidade e, ao mesmo tempo, manter as infos da firma safe.</description>
     </item>
   </channel>

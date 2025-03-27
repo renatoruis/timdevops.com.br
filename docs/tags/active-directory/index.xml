@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Active-Directory on Tim DevOps</title>
+    <link>http://localhost:1313/tags/active-directory/</link>
+    <description>Recent content in Active-Directory on Tim DevOps</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sincronizando registros Cloudflare com DNS do Active Directory</title>
+      <link>http://localhost:1313/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</guid>
+      <description>Trabalhar com ambientes híbridos — onde parte da infraestrutura roda local (on-premises) e outra parte já está na nuvem — traz alguns desafios que não estão nos manuais. Um deles: DNS inconsistente entre ambientes.&#xA;O cenário Trabalhei num projeto que tinha bastante legado. Coisa fina: Active Directory rodando DNS interno, várias zonas internas, e aquele jeitão tradicional de TI raiz. Até aí tudo certo.&#xA;Mas no meio do caminho, as coisas mudaram&amp;hellip;</description>
+    </item>
+  </channel>
+</rss>
