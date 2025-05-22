@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://timdevops.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS</title>
+      <link>https://timdevops.com.br/tags/aws/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>https://timdevops.com.br/tags/cloud/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://timdevops.com.br/tags/devops/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eks</title>
+      <link>https://timdevops.com.br/tags/eks/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/eks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Index</title>
+      <link>https://timdevops.com.br/tags/index/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/index/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://timdevops.com.br/tags/kubernetes/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>https://timdevops.com.br/tags/monitoring/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://timdevops.com.br/tags/monitoring/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Active-Directory</title>
       <link>https://timdevops.com.br/tags/active-directory/</link>
@@ -34,13 +83,6 @@
       <link>https://timdevops.com.br/tags/dns/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://timdevops.com.br/tags/dns/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Index</title>
-      <link>https://timdevops.com.br/tags/index/</link>
-      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://timdevops.com.br/tags/index/</guid>
       <description></description>
     </item>
     <item>
@@ -191,31 +233,10 @@
       <description></description>
     </item>
     <item>
-      <title>AWS</title>
-      <link>https://timdevops.com.br/tags/aws/</link>
-      <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/tags/aws/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>AWS Update</title>
       <link>https://timdevops.com.br/tags/aws-update/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
       <guid>https://timdevops.com.br/tags/aws-update/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cloud</title>
-      <link>https://timdevops.com.br/tags/cloud/</link>
-      <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/tags/cloud/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DevOps</title>
-      <link>https://timdevops.com.br/tags/devops/</link>
-      <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/tags/devops/</guid>
       <description></description>
     </item>
     <item>
