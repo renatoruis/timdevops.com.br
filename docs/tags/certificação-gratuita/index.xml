@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certificação Gratuita on Tim DevOps</title>
-    <link>https://timdevops.com.br/tags/certifica%C3%A7%C3%A3o-gratuita/</link>
+    <link>http://localhost:1313/tags/certifica%C3%A7%C3%A3o-gratuita/</link>
     <description>Recent content in Certificação Gratuita on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Fri, 13 Sep 2024 19:14:23 -0300</lastBuildDate>
-    <atom:link href="https://timdevops.com.br/tags/certifica%C3%A7%C3%A3o-gratuita/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/certifica%C3%A7%C3%A3o-gratuita/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como Conquistei a Certificacao OCI 2024 Foundations Associate Totalmente De Graça</title>
-      <link>https://timdevops.com.br/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</link>
+      <link>http://localhost:1313/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>https://timdevops.com.br/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</guid>
+      <guid>http://localhost:1313/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;OCI.png&#34; alt=&#34;1Z0-1085-24 Oracle Cloud Infrastructure 2024 Foundations Associate &#34;&gt;&#xA;Hey \o&lt;/p&gt;&#xA;&lt;p&gt;Quero compartilhar com vocês como conquistei a certificação &lt;strong&gt;1Z0-1085-24 Oracle Cloud Infrastructure 2024 Foundations Associate&lt;/strong&gt;, e o melhor de tudo: &lt;strong&gt;totalmente de graça!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vou ser simples e objetivo, direto ao ponto, pois sei que se você está lendo isso, provavelmente já pesquisou bastante sobre essa certificação.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Curiosidades sobre o exame&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Exame gratuito e não supervisionado:&lt;/strong&gt; Uma das grandes vantagens desse exame é que ele é &lt;strong&gt;gratuito&lt;/strong&gt;! Isso mesmo, você não precisa desembolsar nada para realizar a prova. Além disso, o exame &lt;strong&gt;não é supervisionado&lt;/strong&gt; (não é proctored) e pode ser feito ao final dos módulos diretamente na plataforma da Oracle University.&lt;/p&gt;</description>
     </item>
   </channel>
