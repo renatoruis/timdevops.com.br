@@ -38,6 +38,7 @@ series = "series"
 
 
 [params]
+  author = 'Renato Ruis'
   color = 'gray'
   instagram = 'renatoruis'
   linkedin = 'renatoruis'

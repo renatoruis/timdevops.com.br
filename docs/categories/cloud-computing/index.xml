@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud Computing on Tim DevOps</title>
-    <link>https://timdevops.com.br/categories/cloud-computing/</link>
+    <link>http://localhost:1313/categories/cloud-computing/</link>
     <description>Recent content in Cloud Computing on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Fri, 06 Sep 2024 15:23:31 -0300</lastBuildDate>
-    <atom:link href="https://timdevops.com.br/categories/cloud-computing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/cloud-computing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🙄 Finalmente AWS NLB Com Ajuste De Timeout</title>
-      <link>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
+      <link>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
+      <guid>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
       <description>&lt;p&gt;Sabe aquela funcionalidade que você pediu há anos e que achava que nunca ia chegar? Pois é, a AWS finalmente entregou! Agora, o Network Load Balancer (NLB) permite configurar o timeout de inatividade para conexões TCP. Antes, o valor era fixo em 350 segundos, o que dava alguma dor de cabeça em aplicações com tráfego de longa duração, como serviços de streaming, bancos de dados e até sistemas ERP.&lt;/p&gt;&#xA;&lt;p&gt;Mas depois de um longo e tenebroso inverno, a AWS decidiu por algum motivo 🙄. Agora, você pode ajustar esse timeout para um valor entre 60 e 6000 segundos (sim, você não leu errado, 6000 segundos conhecido como 10 minutos), garantindo que suas conexões de longa duração não fiquem caindo à toa e sua aplicação funcione de forma mais fluida.&lt;/p&gt;</description>
     </item>
   </channel>
