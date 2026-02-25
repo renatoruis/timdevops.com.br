@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aprendizado on Tim DevOps</title>
-    <link>http://localhost:1313/tags/aprendizado/</link>
+    <link>https://timdevops.com.br/tags/aprendizado/</link>
     <description>Recent content in Aprendizado on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Thu, 28 Aug 2025 11:00:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/aprendizado/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/tags/aprendizado/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Você não precisa pagar para começar a construir sistemas de verdade</title>
-      <link>http://localhost:1313/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</link>
+      <link>https://timdevops.com.br/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</link>
       <pubDate>Thu, 28 Aug 2025 11:00:00 -0300</pubDate>
-      <guid>http://localhost:1313/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</guid>
+      <guid>https://timdevops.com.br/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</guid>
       <description>&lt;p&gt;Tem uma coisa que sempre me chama atenção: muita gente fica travada esperando o &lt;strong&gt;curso perfeito&lt;/strong&gt;, o &lt;strong&gt;bootcamp perfeito&lt;/strong&gt; ou até a &lt;strong&gt;ferramenta paga perfeita&lt;/strong&gt; pra finalmente começar a trabalhar com DevOps, Cloud ou Desenvolvimento de sistemas.&lt;/p&gt;&#xA;&lt;p&gt;Mas olha só:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/&#34;&gt;&lt;strong&gt;Kubernetes&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.postgresql.org/&#34;&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://redis.io/&#34;&gt;&lt;strong&gt;Redis&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rabbitmq.com/&#34;&gt;&lt;strong&gt;RabbitMQ&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.mongodb.com/&#34;&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://nginx.org/&#34;&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://prometheus.io/&#34;&gt;&lt;strong&gt;Prometheus&lt;/strong&gt;&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://grafana.com/&#34;&gt;&lt;strong&gt;Grafana&lt;/strong&gt;&lt;/a&gt; são grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Todas essas ferramentas já estão aí, acessíveis, com documentação de altíssimo nível.&lt;br&gt;&#xA;Nenhuma barreira de entrada além da tua curiosidade.&lt;/p&gt;</description>
     </item>
   </channel>

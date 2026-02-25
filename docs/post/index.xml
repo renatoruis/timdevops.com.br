@@ -2,143 +2,143 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tim DevOps</title>
-    <link>http://localhost:1313/post/</link>
+    <link>https://timdevops.com.br/post/</link>
     <description>Recent content in Posts on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Wed, 25 Feb 2026 10:09:30 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como Ter E-mail com Domínio Próprio de Graça (Cloudflare &#43; Gmail)</title>
-      <link>http://localhost:1313/post/como-ter-email-com-dominio-proprio-gratuitamente/</link>
+      <link>https://timdevops.com.br/post/como-ter-email-com-dominio-proprio-gratuitamente/</link>
       <pubDate>Wed, 25 Feb 2026 10:09:30 +0000</pubDate>
-      <guid>http://localhost:1313/post/como-ter-email-com-dominio-proprio-gratuitamente/</guid>
+      <guid>https://timdevops.com.br/post/como-ter-email-com-dominio-proprio-gratuitamente/</guid>
       <description>&lt;p&gt;Como ter e-mail com domínio próprio de graça usando Cloudflare + Gmail&lt;/p&gt;&#xA;&lt;p&gt;Muita gente paga Google Workspace ou Microsoft 365 apenas para usar um e-mail como &lt;a href=&#34;mailto:contato@seudominio.com&#34;&gt;contato@seudominio.com&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Se a necessidade for simples — receber e responder e-mails com um domínio próprio — dá para fazer isso pagando apenas o domínio.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-solução-usa&#34;&gt;A solução usa:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1 domínio (≈ US$10–15/ano ou ~R$40/ano no registro.br)&lt;/li&gt;&#xA;&lt;li&gt;1 conta Gmail gratuita&lt;/li&gt;&#xA;&lt;li&gt;1 conta Cloudflare gratuita&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Abaixo está o passo a passo e as limitações reais.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Você não precisa pagar para começar a construir sistemas de verdade</title>
-      <link>http://localhost:1313/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</link>
+      <link>https://timdevops.com.br/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</link>
       <pubDate>Thu, 28 Aug 2025 11:00:00 -0300</pubDate>
-      <guid>http://localhost:1313/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</guid>
+      <guid>https://timdevops.com.br/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</guid>
       <description>&lt;p&gt;Tem uma coisa que sempre me chama atenção: muita gente fica travada esperando o &lt;strong&gt;curso perfeito&lt;/strong&gt;, o &lt;strong&gt;bootcamp perfeito&lt;/strong&gt; ou até a &lt;strong&gt;ferramenta paga perfeita&lt;/strong&gt; pra finalmente começar a trabalhar com DevOps, Cloud ou Desenvolvimento de sistemas.&lt;/p&gt;&#xA;&lt;p&gt;Mas olha só:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/&#34;&gt;&lt;strong&gt;Kubernetes&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.postgresql.org/&#34;&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://redis.io/&#34;&gt;&lt;strong&gt;Redis&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rabbitmq.com/&#34;&gt;&lt;strong&gt;RabbitMQ&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.mongodb.com/&#34;&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://nginx.org/&#34;&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://prometheus.io/&#34;&gt;&lt;strong&gt;Prometheus&lt;/strong&gt;&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://grafana.com/&#34;&gt;&lt;strong&gt;Grafana&lt;/strong&gt;&lt;/a&gt; são grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Todas essas ferramentas já estão aí, acessíveis, com documentação de altíssimo nível.&lt;br&gt;&#xA;Nenhuma barreira de entrada além da tua curiosidade.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Por que todo dev deveria experimentar o self-hosting</title>
-      <link>http://localhost:1313/post/todo-dev-precisa-de-self-hosted/</link>
+      <link>https://timdevops.com.br/post/todo-dev-precisa-de-self-hosted/</link>
       <pubDate>Tue, 26 Aug 2025 11:39:12 -0300</pubDate>
-      <guid>http://localhost:1313/post/todo-dev-precisa-de-self-hosted/</guid>
+      <guid>https://timdevops.com.br/post/todo-dev-precisa-de-self-hosted/</guid>
       <description>&lt;hr&gt;&#xA;&lt;p&gt;Self-hosting ou “rodar suas próprias aplicações nos seus próprios servidores” parece coisa de nerd que gosta de sofrer. Mas a real é que esse hábito pode ensinar MUITA coisa que você não aprende só escrevendo código.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;self-hosted.png&#34; alt=&#34;self-hosted&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-cenário&#34;&gt;O cenário&lt;/h2&gt;&#xA;&lt;p&gt;Quando a gente começa na área, normalmente foca em escrever features, rodar testes e dar deploy em alguma nuvem já pronta. Beleza, isso funciona.&lt;br&gt;&#xA;Mas quando você decide rodar um serviço &lt;strong&gt;você mesmo&lt;/strong&gt; (seja num VPS baratinho, num Raspberry Pi, ou até numa VM em casa), a brincadeira muda de nível.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chegou o AWS EKS Dashboard</title>
-      <link>http://localhost:1313/post/chegou-o-eks-dashboard/</link>
+      <link>https://timdevops.com.br/post/chegou-o-eks-dashboard/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/chegou-o-eks-dashboard/</guid>
+      <guid>https://timdevops.com.br/post/chegou-o-eks-dashboard/</guid>
       <description>&lt;p&gt;Recentemente a AWS lançou uma funcionalidade que me fez pensar: &amp;ldquo;Ué, como isso ainda não existia nativamente?&amp;rdquo; — Tô falando do novo EKS Dashboard.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2025/05/19/eks-dashboard-01-1024x854.png&#34; alt=&#34;AWS EKS Dashboard - Visão Geral&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-cenário&#34;&gt;O cenário&lt;/h2&gt;&#xA;&lt;p&gt;Se você já trabalhou com múltiplas contas ou múltiplas regiões usando Amazon EKS, sabe a dor: a gente tem que ficar alternando de conta, região, contexto do kubectl, role assumida&amp;hellip; tudo pra conseguir saber o que tá acontecendo com nossos clusters. E claro, isso só piora quando você precisa dar visibilidade pra time de segurança ou gestão, que só quer saber se tá tudo saudável ou não 😅&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sincronizando registros Cloudflare com DNS do Active Directory</title>
-      <link>http://localhost:1313/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</link>
+      <link>https://timdevops.com.br/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</guid>
+      <guid>https://timdevops.com.br/post/sincronizar-cloudflare-com-ad-sem-dor-de-cabeca/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;banner.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Trabalhar com ambientes híbridos — onde parte da infraestrutura roda local (on-premises) e outra parte já está na nuvem — traz alguns desafios que não estão nos manuais.&#xA;Um deles: &lt;strong&gt;DNS inconsistente entre ambientes&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;o-cenário&#34;&gt;O cenário&lt;/h2&gt;&#xA;&lt;p&gt;Trabalhei num projeto que tinha bastante legado. Coisa fina: &lt;strong&gt;Active Directory rodando DNS interno&lt;/strong&gt;, várias zonas internas, e aquele jeitão tradicional de TI raiz. Até aí tudo certo.&lt;/p&gt;&#xA;&lt;p&gt;Mas no meio do caminho, as coisas mudaram&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Como Trabalhar Em Pé Melhorou Minha Produtividade e Bem-Estar</title>
-      <link>http://localhost:1313/post/como-trabalhar-em-pe-melhorou-minha-produtividade-e-bem-estar/</link>
+      <link>https://timdevops.com.br/post/como-trabalhar-em-pe-melhorou-minha-produtividade-e-bem-estar/</link>
       <pubDate>Fri, 13 Sep 2024 19:32:09 -0300</pubDate>
-      <guid>http://localhost:1313/post/como-trabalhar-em-pe-melhorou-minha-produtividade-e-bem-estar/</guid>
+      <guid>https://timdevops.com.br/post/como-trabalhar-em-pe-melhorou-minha-produtividade-e-bem-estar/</guid>
       <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img alt=&#34;Ambiente de trabalho em pé&#34; src=&#34;desktop.jpg&#34; /&gt;&#xA;&lt;/p&gt;&#xA;&lt;h1 id=&#34;hey-o&#34;&gt;Hey \o/&lt;/h1&gt;&#xA;&lt;p&gt;Quero compartilhar com vocês como adotar o hábito de &lt;strong&gt;trabalhar em pé&lt;/strong&gt; durante alguns momentos do dia tem melhorado minha disposição e produtividade. Tudo começou quando trabalhei com americanos e percebi que muitos deles já adotavam essa prática. Decidi tentar e não me arrependi!&lt;/p&gt;&#xA;&lt;h2 id=&#34;por-que-trabalhar-em-pé&#34;&gt;Por que Trabalhar em Pé?&lt;/h2&gt;&#xA;&lt;p&gt;Passamos grande parte do nosso tempo sentados, e isso pode causar vários problemas de saúde, como dores nas costas e má postura. Incorporar períodos de trabalho em pé ajudou a:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Como Conquistei a Certificacao OCI 2024 Foundations Associate Totalmente De Graça</title>
-      <link>http://localhost:1313/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</link>
+      <link>https://timdevops.com.br/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</link>
       <pubDate>Fri, 13 Sep 2024 19:14:23 -0300</pubDate>
-      <guid>http://localhost:1313/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</guid>
+      <guid>https://timdevops.com.br/post/como-conquistei-a-certificacao-oci-2024-foundations-associate-totalmente-de-graca/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;OCI.png&#34; alt=&#34;1Z0-1085-24 Oracle Cloud Infrastructure 2024 Foundations Associate &#34;&gt;&#xA;Hey \o&lt;/p&gt;&#xA;&lt;p&gt;Quero compartilhar com vocês como conquistei a certificação &lt;strong&gt;1Z0-1085-24 Oracle Cloud Infrastructure 2024 Foundations Associate&lt;/strong&gt;, e o melhor de tudo: &lt;strong&gt;totalmente de graça!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vou ser simples e objetivo, direto ao ponto, pois sei que se você está lendo isso, provavelmente já pesquisou bastante sobre essa certificação.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Curiosidades sobre o exame&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Exame gratuito e não supervisionado:&lt;/strong&gt; Uma das grandes vantagens desse exame é que ele é &lt;strong&gt;gratuito&lt;/strong&gt;! Isso mesmo, você não precisa desembolsar nada para realizar a prova. Além disso, o exame &lt;strong&gt;não é supervisionado&lt;/strong&gt; (não é proctored) e pode ser feito ao final dos módulos diretamente na plataforma da Oracle University.&lt;/p&gt;</description>
     </item>
     <item>
       <title>🙄 Finalmente AWS NLB Com Ajuste De Timeout</title>
-      <link>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
+      <link>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
+      <guid>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
       <description>&lt;p&gt;Sabe aquela funcionalidade que você pediu há anos e que achava que nunca ia chegar? Pois é, a AWS finalmente entregou! Agora, o Network Load Balancer (NLB) permite configurar o timeout de inatividade para conexões TCP. Antes, o valor era fixo em 350 segundos, o que dava alguma dor de cabeça em aplicações com tráfego de longa duração, como serviços de streaming, bancos de dados e até sistemas ERP.&lt;/p&gt;&#xA;&lt;p&gt;Mas depois de um longo e tenebroso inverno, a AWS decidiu por algum motivo 🙄. Agora, você pode ajustar esse timeout para um valor entre 60 e 6000 segundos (sim, você não leu errado, 6000 segundos conhecido como 10 minutos), garantindo que suas conexões de longa duração não fiquem caindo à toa e sua aplicação funcione de forma mais fluida.&lt;/p&gt;</description>
     </item>
     <item>
       <title>4 Dicas para aumentar sua produtividade no terminal Linux</title>
-      <link>http://localhost:1313/post/4dicaslinux/</link>
+      <link>https://timdevops.com.br/post/4dicaslinux/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/4dicaslinux/</guid>
+      <guid>https://timdevops.com.br/post/4dicaslinux/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;1_78yvLHhmmVCP_5x5qNNjnA.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hoje em português :)&#xA;Dicas para aumentar produtividade no terminal Linux&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-ctrlr&#34;&gt;&lt;strong&gt;#1 CTRL+R&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Essa combinação vai te permitir uma busca recursiva em seu histórico de comandos executados, certamente isso vai aumentar sua produtividade em pelo menos 40%&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-pipe-e-grep&#34;&gt;&lt;strong&gt;#2 “Pipe e Grep”&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Essa combinação é a mais basica e vai te acompanhar pra sempre, depois que aprende nunca mais sai da sua toolbox, existem unúmera aplicações, mas, o mais comum é usar em conjunto com os comandos “cat”, “ls”, “find”, “tail”.&#xA;&lt;a href=&#34;https://javarevisited.blogspot.com/2011/06/10-examples-of-grep-command-in-unix-and.html#axzz6qVfxXvpN&#34;&gt;10 exemplode de uso do grep&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>🚀 Oportunidade de Economizar em Ferramentas de Comunicação! 🚀</title>
-      <link>http://localhost:1313/post/zulip/</link>
+      <link>https://timdevops.com.br/post/zulip/</link>
       <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/zulip/</guid>
+      <guid>https://timdevops.com.br/post/zulip/</guid>
       <description>&lt;h2 id=&#34;-oportunidade-de-economizar-em-ferramentas-de-comunicação-&#34;&gt;🚀 Oportunidade de Economizar em Ferramentas de Comunicação! 🚀&lt;/h2&gt;&#xA;&lt;h3 id=&#34;essa-ferramenta-é-top&#34;&gt;Essa ferramenta é TOP!&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;1_y31zyX8eqdBog7m_ZKMGhA.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;⚠️ *Primeiro, quero deixar claro: não estou sendo patrocinado por ninguém para falar isso. Eu simplesmente me deparei com uma ferramenta incrível e senti que precisava compartilhar com a comunidade! *⚠️&lt;/p&gt;&#xA;&lt;p&gt;🔎 Você está sempre em busca ou precisa de maneiras de cortar custos sem comprometer a qualidade? Se Slack, Teams e outros estão pesando no seu bolso, tenho uma dica dourada para você!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Grátis! Treinamentos e materiais</title>
-      <link>http://localhost:1313/post/treinamentos/</link>
+      <link>https://timdevops.com.br/post/treinamentos/</link>
       <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/treinamentos/</guid>
+      <guid>https://timdevops.com.br/post/treinamentos/</guid>
       <description>&lt;p&gt;Minha jornada até aqui foi pavimentada pelo apoio da comunidade, e é hora de retribuir com #gratitude.&lt;/p&gt;</description>
     </item>
     <item>
       <title>EKS Agora Permite a Modificação De Sub Redes E Grupos De Segurança</title>
-      <link>http://localhost:1313/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</link>
+      <link>https://timdevops.com.br/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</link>
       <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</guid>
+      <guid>https://timdevops.com.br/post/eks-agora-permite-a-modifica%C3%A7%C3%A3o-de-sub-redes-e-grupos-de-seguran%C3%A7a/</guid>
       <description>&lt;h2 id=&#34;eks-agora-permite-a-modificação-de-sub-redes-e-grupos-de-segurança&#34;&gt;EKS agora permite a modificação de sub-redes e grupos de segurança&lt;/h2&gt;&#xA;&lt;h3 id=&#34;finalmente&#34;&gt;finalmente!&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;1.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Fala gente! Para quem trabalha no mundo do EKS, tem novidades. A partir de agora, é possível atualizar as sub-redes e os grupos de segurança associados aos seus clusters EKS existentes. Isso mesmo! &lt;strong&gt;FINALMENTE!&lt;/strong&gt; Se antes você tinha que ficar preso às configurações iniciais ou criar um novo cluster quando algo mudava, agora a vida ficou mais fácil.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Use tranquilo o ChatGPT no Trampo</title>
-      <link>http://localhost:1313/post/chatgptnotrampo/</link>
+      <link>https://timdevops.com.br/post/chatgptnotrampo/</link>
       <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/chatgptnotrampo/</guid>
+      <guid>https://timdevops.com.br/post/chatgptnotrampo/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;1_mP2NJ0i4IaDd9yMQUgXjIQ.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Salve! Desde que o ChatGPT apareceu, a parada mudou completamente. Pra quem tá por fora, essa é a parada revolucionária da &lt;a href=&#34;https://openai.com/&#34;&gt;OpenAI&lt;/a&gt; que chegou em novembro de 2022. Tá ajudando a galera a fazer de TUDO, desde escrever um texto até escrever funçoes lambdas complexas. Mas ó, não vacila com os dados da empresa. Vamos bater um papo sobre como usar essa novidade e, ao mesmo tempo, manter as infos da firma safe.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CROC já usou?</title>
-      <link>http://localhost:1313/post/croc/</link>
+      <link>https://timdevops.com.br/post/croc/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/croc/</guid>
+      <guid>https://timdevops.com.br/post/croc/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;0_1jc4AtDCx9XsykIl.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Não sei se você já preciso transferir um arquivo de forma rápida, um log, um certificado, uma chave ou algo do tipo, para um amigo, outro datacenter, outra VM outro país haha, o que vem na cabeça? tem muitas ferramentas pra fazer isso algumas com interface, browser e até CLI dependendo do cenário.&lt;/p&gt;&#xA;&lt;p&gt;Já precisei fazer isso algumas vezes e do outro lado tinha um Windows, bloqueios, RDP etc etc etc muitas coisas que dificulta isso.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Habilidades que todo profissional de TECH precisa</title>
-      <link>http://localhost:1313/post/habilidade/</link>
+      <link>https://timdevops.com.br/post/habilidade/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/habilidade/</guid>
+      <guid>https://timdevops.com.br/post/habilidade/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;1_XcL-NTc6co-csz4wticyaw.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Desvendando os segredos além do código: o que realmente faz a diferença na carreira tech!&lt;/p&gt;&#xA;&lt;p&gt;Fala gente! Sempre ouvimos falar sobre como é essencial saber programar, conhecer as últimas ferramentas e estar por dentro das novidades. Mas, bora combinar, &lt;strong&gt;&lt;em&gt;não é só de código que vive um profissional de tecnologia&lt;/em&gt;&lt;/strong&gt;, certo? Aquelas habilidades que não estão nos livros, mas fazem toda a diferença no dia a dia, são tão valiosas quanto.&lt;/p&gt;</description>
     </item>
     <item>
       <title>As Diferenças entre DevOps, DevSecOps, SRE e Engenheiro de Plataforma</title>
-      <link>http://localhost:1313/post/diferencadevopsesre/</link>
+      <link>https://timdevops.com.br/post/diferencadevopsesre/</link>
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/diferencadevopsesre/</guid>
+      <guid>https://timdevops.com.br/post/diferencadevopsesre/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;1_KoHMxYihHSxdB4X6KAz4JA.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Salve!&lt;/p&gt;&#xA;&lt;p&gt;Hoje, vamos falar do universo da engenharia de software e explorar as nuances entre quatro papéis essenciais: &lt;strong&gt;&lt;em&gt;DevOps, DevSecOps, SRE (Site Reliability Engineering) e Engenheiro de Plataforma&lt;/em&gt;&lt;/strong&gt;. Embora essas funções sejam cruciais para o sucesso das operações de TI, é importante destacar que &lt;strong&gt;nem tudo é 100% certo&lt;/strong&gt; no mundo dinâmico da tecnologia. Vamos ver um pouco essas diferenças.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;0_Rg_7vMFtWEDFaBa7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;devops-a-colaboração-no-centro&#34;&gt;DevOps: A Colaboração no Centro&lt;/h2&gt;&#xA;&lt;p&gt;O DevOps é como uma cola que une equipes de desenvolvimento e operações. Aqui estão alguns pontos-chave:&lt;/p&gt;</description>
     </item>
     <item>
       <title>AWS Vai cobrar os IPs Públicos</title>
-      <link>http://localhost:1313/post/awsvaicobrarippublico/</link>
+      <link>https://timdevops.com.br/post/awsvaicobrarippublico/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/awsvaicobrarippublico/</guid>
+      <guid>https://timdevops.com.br/post/awsvaicobrarippublico/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;0_l6DH2slO0VPpIGvi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;— — Este é um resumo do &lt;a href=&#34;https://aws.amazon.com/pt/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/&#34;&gt;post&lt;/a&gt; do &lt;a href=&#34;https://aws.amazon.com/blogs/aws/author/jbarr/&#34;&gt;Jeff Barr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;A partir de 1º de fevereiro de 2024, a AWS vai começar a cobrar &lt;strong&gt;$0.005&lt;/strong&gt; por hora por cada endereço público IPv4, independentemente se estiverem vinculados a um serviço ou não. Isso vale pra todos os serviços AWS como Amazon EC2, RDS, EKS e outros.&lt;/p&gt;&#xA;&lt;p&gt;Sabe por quê? Os endereços IPv4 estão cada vez mais escassos e o custo pra conseguir um endereço público aumentou mais de 300% nos últimos 5 anos. Então, a ideia é que a gente seja mais econômico no uso de endereços públicos IPv4 e comece a pensar em adotar o IPv6.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD</title>
-      <link>http://localhost:1313/post/stackmonitoramento/</link>
+      <link>https://timdevops.com.br/post/stackmonitoramento/</link>
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/stackmonitoramento/</guid>
+      <guid>https://timdevops.com.br/post/stackmonitoramento/</guid>
       <description>&lt;h2 id=&#34;implantando-prometheus-e-grafana-no-kubernetes-usando-o-argocd&#34;&gt;Implantando Prometheus e Grafana no Kubernetes usando o ArgoCD&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;0_nb73iD8C_1wnv6Js.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Introdução ao Prometheus, Grafana e ArgoCD&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Prometheus&lt;/strong&gt; é uma solução de monitoramento para registrar e processar séries temporais puramente numéricas. Ele coleta, organiza e armazena métricas juntamente com identificadores únicos e marcação de data/hora.&lt;/p&gt;&#xA;&lt;p&gt;Prometheus é um software de código aberto que coleta métricas de alvos por meio de “scraping” nos endpoints HTTP de métricas. Os “targets” suportados incluem plataformas de infraestrutura (por exemplo, Kubernetes), aplicativos e serviços (por exemplo, sistemas de gerenciamento de bancos de dados). Junto com o serviço complementar &lt;strong&gt;AlertManager&lt;/strong&gt;, o Prometheus é uma ferramenta flexível para coleta de métricas e alertas.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CKA Consegui Com Dicas Importantes</title>
-      <link>http://localhost:1313/post/cka-consegui-com-dicas-importantes/</link>
+      <link>https://timdevops.com.br/post/cka-consegui-com-dicas-importantes/</link>
       <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/cka-consegui-com-dicas-importantes/</guid>
+      <guid>https://timdevops.com.br/post/cka-consegui-com-dicas-importantes/</guid>
       <description>&lt;h2 id=&#34;cka-consegui-com-dicas-importantes&#34;&gt;CKA Consegui com dicas importantes&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;1.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;hey-o&#34;&gt;Hey \o&lt;/h2&gt;&#xA;&lt;p&gt;Quero compartilhar um pouco de como consegui essa certificação que é muito requisitada/cobiçada&lt;/p&gt;&#xA;&lt;p&gt;Vou ser simples e objetivo direto ao ponto, pois sei que se você está lendo isso, provavelmente, já leu muita coisa sobre CKA na internet.&lt;/p&gt;&#xA;&lt;h2 id=&#34;curiosidades-sobre-o-exame&#34;&gt;Curiosidades sobre o exame&lt;/h2&gt;&#xA;&lt;p&gt;**Informaçòes oficiais: **Você provavelmente já leu no site oficial sobre o exame em si, se não, você precisa ler tudo sobre &lt;a href=&#34;https://www.cncf.io/certification/cka/&#34;&gt;aqui&lt;/a&gt; de verdade leia e releia, leia as letrinha pequenas e e esse &lt;a href=&#34;https://training.linuxfoundation.org/wp-content/uploads/2020/04/CKA-CKAD-FAQ-April2020.pdf&#34;&gt;pdf&lt;/a&gt; aqui também, mas vou deixar pontos que acho importante e que aconteceu comigo.&lt;/p&gt;</description>
     </item>
   </channel>

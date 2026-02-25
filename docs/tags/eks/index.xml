@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eks on Tim DevOps</title>
-    <link>http://localhost:1313/tags/eks/</link>
+    <link>https://timdevops.com.br/tags/eks/</link>
     <description>Recent content in Eks on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/eks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/tags/eks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chegou o AWS EKS Dashboard</title>
-      <link>http://localhost:1313/post/chegou-o-eks-dashboard/</link>
+      <link>https://timdevops.com.br/post/chegou-o-eks-dashboard/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/chegou-o-eks-dashboard/</guid>
+      <guid>https://timdevops.com.br/post/chegou-o-eks-dashboard/</guid>
       <description>&lt;p&gt;Recentemente a AWS lançou uma funcionalidade que me fez pensar: &amp;ldquo;Ué, como isso ainda não existia nativamente?&amp;rdquo; — Tô falando do novo EKS Dashboard.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2025/05/19/eks-dashboard-01-1024x854.png&#34; alt=&#34;AWS EKS Dashboard - Visão Geral&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-cenário&#34;&gt;O cenário&lt;/h2&gt;&#xA;&lt;p&gt;Se você já trabalhou com múltiplas contas ou múltiplas regiões usando Amazon EKS, sabe a dor: a gente tem que ficar alternando de conta, região, contexto do kubectl, role assumida&amp;hellip; tudo pra conseguir saber o que tá acontecendo com nossos clusters. E claro, isso só piora quando você precisa dar visibilidade pra time de segurança ou gestão, que só quer saber se tá tudo saudável ou não 😅&lt;/p&gt;</description>
     </item>
   </channel>

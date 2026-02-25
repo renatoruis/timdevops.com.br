@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevOps on Tim DevOps</title>
-    <link>http://localhost:1313/tags/devops/</link>
+    <link>https://timdevops.com.br/tags/devops/</link>
     <description>Recent content in DevOps on Tim DevOps</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Thu, 28 Aug 2025 11:00:00 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://timdevops.com.br/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Você não precisa pagar para começar a construir sistemas de verdade</title>
-      <link>http://localhost:1313/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</link>
+      <link>https://timdevops.com.br/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</link>
       <pubDate>Thu, 28 Aug 2025 11:00:00 -0300</pubDate>
-      <guid>http://localhost:1313/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</guid>
+      <guid>https://timdevops.com.br/post/voce-nao-precisa-pagar-para-comecar-a-construir-sistemas-de-verdade/</guid>
       <description>&lt;p&gt;Tem uma coisa que sempre me chama atenção: muita gente fica travada esperando o &lt;strong&gt;curso perfeito&lt;/strong&gt;, o &lt;strong&gt;bootcamp perfeito&lt;/strong&gt; ou até a &lt;strong&gt;ferramenta paga perfeita&lt;/strong&gt; pra finalmente começar a trabalhar com DevOps, Cloud ou Desenvolvimento de sistemas.&lt;/p&gt;&#xA;&lt;p&gt;Mas olha só:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/&#34;&gt;&lt;strong&gt;Kubernetes&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.postgresql.org/&#34;&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://redis.io/&#34;&gt;&lt;strong&gt;Redis&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rabbitmq.com/&#34;&gt;&lt;strong&gt;RabbitMQ&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.mongodb.com/&#34;&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://nginx.org/&#34;&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://prometheus.io/&#34;&gt;&lt;strong&gt;Prometheus&lt;/strong&gt;&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://grafana.com/&#34;&gt;&lt;strong&gt;Grafana&lt;/strong&gt;&lt;/a&gt; são grátis&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; é grátis&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Todas essas ferramentas já estão aí, acessíveis, com documentação de altíssimo nível.&lt;br&gt;&#xA;Nenhuma barreira de entrada além da tua curiosidade.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chegou o AWS EKS Dashboard</title>
-      <link>http://localhost:1313/post/chegou-o-eks-dashboard/</link>
+      <link>https://timdevops.com.br/post/chegou-o-eks-dashboard/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/chegou-o-eks-dashboard/</guid>
+      <guid>https://timdevops.com.br/post/chegou-o-eks-dashboard/</guid>
       <description>&lt;p&gt;Recentemente a AWS lançou uma funcionalidade que me fez pensar: &amp;ldquo;Ué, como isso ainda não existia nativamente?&amp;rdquo; — Tô falando do novo EKS Dashboard.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2025/05/19/eks-dashboard-01-1024x854.png&#34; alt=&#34;AWS EKS Dashboard - Visão Geral&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-cenário&#34;&gt;O cenário&lt;/h2&gt;&#xA;&lt;p&gt;Se você já trabalhou com múltiplas contas ou múltiplas regiões usando Amazon EKS, sabe a dor: a gente tem que ficar alternando de conta, região, contexto do kubectl, role assumida&amp;hellip; tudo pra conseguir saber o que tá acontecendo com nossos clusters. E claro, isso só piora quando você precisa dar visibilidade pra time de segurança ou gestão, que só quer saber se tá tudo saudável ou não 😅&lt;/p&gt;</description>
     </item>
     <item>
       <title>🙄 Finalmente AWS NLB Com Ajuste De Timeout</title>
-      <link>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
+      <link>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</link>
       <pubDate>Fri, 06 Sep 2024 15:23:31 -0300</pubDate>
-      <guid>http://localhost:1313/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
+      <guid>https://timdevops.com.br/post/finalmente-aws-nlb-com-ajuste-de-timeout/</guid>
       <description>&lt;p&gt;Sabe aquela funcionalidade que você pediu há anos e que achava que nunca ia chegar? Pois é, a AWS finalmente entregou! Agora, o Network Load Balancer (NLB) permite configurar o timeout de inatividade para conexões TCP. Antes, o valor era fixo em 350 segundos, o que dava alguma dor de cabeça em aplicações com tráfego de longa duração, como serviços de streaming, bancos de dados e até sistemas ERP.&lt;/p&gt;&#xA;&lt;p&gt;Mas depois de um longo e tenebroso inverno, a AWS decidiu por algum motivo 🙄. Agora, você pode ajustar esse timeout para um valor entre 60 e 6000 segundos (sim, você não leu errado, 6000 segundos conhecido como 10 minutos), garantindo que suas conexões de longa duração não fiquem caindo à toa e sua aplicação funcione de forma mais fluida.&lt;/p&gt;</description>
     </item>
   </channel>
