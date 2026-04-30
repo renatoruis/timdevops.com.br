@@ -1,6 +1,4 @@
 <head>
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"> -->
-
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -14,20 +12,32 @@
   <!-- meta -->
   <meta name="theme-color" />
 
-  <!-- author -->
   {{ $site_author := or site.Params.author site.Params.name site.Title }}
-  <!---->
+  {{ $default_desc := site.Params.description | default "Artigos sobre DevOps, cloud e tecnologia por Renato Ruis (Tim DevOps)." }}
+  {{ $.Scratch.Set "meta_desc" $default_desc }}
   {{ if eq .Kind "page" }}
-  <meta name="description" content="{{ .Summary }}" />
+    {{ with or .Description .Params.description }}
+      {{ $.Scratch.Set "meta_desc" . }}
+    {{ else }}
+      {{ with plainify .Summary }}
+        {{ $.Scratch.Set "meta_desc" . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <meta name="description" content="{{ $.Scratch.Get `meta_desc` | truncate 160 }}" />
+  {{ if eq .Kind "page" }}
   <meta name="author" content="{{ or .Params.author $site_author }}" />
   {{ else }}
-  <!---->
-  <meta
-    name="description"
-    content="{{ site.Params.description | default (print `A personal blog`) }}"
-  />
   <meta name="author" content="{{ $site_author }}" />
   {{ end }}
+
+  <!-- fonts (privacy-friendly, GDPR/LGPD safe via Bunny Fonts) -->
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:400,500&display=swap"
+  />
 
   <!-- css & js -->
   {{ $main := resources.Get "main.css" }}
@@ -96,6 +106,26 @@
   {{ template "_internal/opengraph.html" . }}
   <!---->
   {{ template "_internal/twitter_cards.html" . }}
+
+  {{/* Per-post OG image override — looks for cover/feature/og bundle resources */}}
+  {{ if eq .Kind "page" }}
+    {{ $cover := "" }}
+    {{ with .Resources.GetMatch "cover.*" }}{{ $cover = . }}{{ end }}
+    {{ if not $cover }}{{ with .Resources.GetMatch "feature.*" }}{{ $cover = . }}{{ end }}{{ end }}
+    {{ if not $cover }}{{ with .Resources.GetMatch "og.*" }}{{ $cover = . }}{{ end }}{{ end }}
+    {{ with $cover }}
+      {{ $img := . }}
+      {{ if and (in (slice "image/jpeg" "image/png" "image/webp") .MediaType.Type) (gt .Width 600) }}
+        {{ $img = .Resize "1200x630 webp q82" }}
+      {{ end }}
+  <meta property="og:image" content="{{ $img.Permalink }}" />
+  <meta property="og:image:width" content="{{ $img.Width }}" />
+  <meta property="og:image:height" content="{{ $img.Height }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{{ $img.Permalink }}" />
+    {{ end }}
+  {{ end }}
+
   <!-- RSS -->
   {{ range .AlternativeOutputFormats }}
   <link

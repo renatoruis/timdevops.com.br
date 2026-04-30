@@ -1,32 +1,27 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  pull_request:
+    branches: ["main"]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: false
 
+env:
+  HUGO_VERSION: "0.156.0"
+
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
+    name: Build site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,19 +29,61 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
-      - name: Build
-        run: hugo --baseURL "https://timdevops.com.br/"
+
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: |
+            resources/_gen
+            ~/.cache/hugo_cache
+          key: ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}-${{ hashFiles('hugo.toml', 'content/**', 'layouts/**', 'assets/**', 'static/**') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}-
+
+      - name: Build site
+        env:
+          HUGO_ENV: production
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --cleanDestinationDir \
+            --baseURL "https://timdevops.com.br/"
+
       - name: Setup Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs/'
-      - name: Deploy to GitHub Pages
+          path: ./docs/
+
+      - name: Upload preview artifact (PR)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview-${{ github.event.pull_request.number }}
+          path: ./docs/
+          retention-days: 7
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

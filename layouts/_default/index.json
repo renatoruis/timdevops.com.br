@@ -1,5 +1,6 @@
+{{- $posts := where site.RegularPages "Section" "post" -}}
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Site.RegularPages -}}
+{{- range $posts -}}
   {{- $.Scratch.Add "index" (dict "title" .Title "link" .Permalink "content" .Plain) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

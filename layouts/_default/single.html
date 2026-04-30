@@ -1,0 +1,235 @@
+{{ define "main" }}
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
+
+    {{ if ne .Type "page" }}
+    <div class="text-xs antialiased opacity-60">
+      {{ if .Date }}
+      <time>{{ .Date | time.Format ":date_medium" }}</time>
+      {{ end }}<!---->
+      {{ $single_author := or .Params.author site.Params.author site.Params.name }}
+      <!---->
+      {{ if $single_author }}
+      <span class="mx-1">&middot;</span>
+      <span>{{ $single_author }}</span>
+      {{ end }}
+      {{ if and (eq .Section "post") .WordCount }}
+      {{ $wpm := 200 }}
+      {{ $mins := math.Max 1 (math.Round (div (float .WordCount) (float $wpm))) }}
+      <span class="mx-1">&middot;</span>
+      <span>{{ $mins }} min de leitura</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  {{ if and .Params.toc (ne .Type "page") }}
+  <aside class="toc mb-12 rounded-lg bg-black/[3%] p-4 text-sm dark:bg-white/[8%] lg:sticky lg:top-8 lg:float-right lg:-mr-8 lg:ml-6 lg:max-w-[18rem]" aria-label="Índice do artigo">
+    <p class="m-0 mb-2 text-xs uppercase tracking-wider opacity-60">Nesta página</p>
+    {{ .TableOfContents }}
+  </aside>
+  <script>
+    (function () {
+      const toc = document.querySelector('.toc');
+      if (!toc) return;
+      const links = toc.querySelectorAll('a[href^="#"]');
+      if (!links.length) return;
+
+      const map = new Map();
+      links.forEach((a) => {
+        const id = decodeURIComponent(a.getAttribute('href').slice(1));
+        const el = document.getElementById(id);
+        if (el) map.set(el, a);
+      });
+
+      let current = null;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const link = map.get(entry.target);
+            if (!link) return;
+            if (entry.isIntersecting) {
+              if (current && current !== link) current.classList.remove('is-active');
+              link.classList.add('is-active');
+              current = link;
+            }
+          });
+        },
+        { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+      );
+
+      map.forEach((_, el) => observer.observe(el));
+    })();
+  </script>
+  {{ end }}
+
+  <section>{{ .Content }}</section>
+
+  {{ if eq .Section "post" }}
+  <script>
+    (function () {
+      const blocks = document.querySelectorAll('main article .highlight');
+      blocks.forEach((block) => {
+        const code = block.querySelector('pre code') || block.querySelector('pre');
+        if (!code) return;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy-code-btn';
+        btn.setAttribute('aria-label', 'Copiar código');
+        btn.textContent = 'Copiar';
+        block.appendChild(btn);
+
+        btn.addEventListener('click', async () => {
+          const text = code.innerText.replace(/\n$/, '');
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (_) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+          btn.textContent = 'Copiado!';
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.textContent = 'Copiar';
+            btn.classList.remove('copied');
+          }, 1800);
+        });
+      });
+    })();
+  </script>
+  {{ end }}
+
+  {{ partial "share-buttons.html" . }}
+
+  <!-- Post Tags -->
+  {{ if .Params.tags }}
+  <footer class="flex flex-wrap mt-12">
+    {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
+    <a
+      class="mb-1.5 mr-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline dark:bg-white/[8%]"
+      href="{{ $href }}"
+      >{{ . }}</a
+    >
+    {{ end }}
+  </footer>
+  {{ end }}
+
+  {{ if eq .Section "post" }}
+  {{ $related := site.RegularPages.Related . | first 4 }}
+  {{ with $related }}
+  <aside class="not-prose mt-14 border-t border-black/[8%] pt-10 dark:border-white/[12%]">
+    <p class="mb-3 text-xs uppercase tracking-wider opacity-60">Relacionados</p>
+    <ul class="m-0 list-none space-y-2 p-0">
+      {{ range . }}
+      <li>
+        <a href="{{ .Permalink }}" class="font-normal text-inherit no-underline hover:underline">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </aside>
+  {{ end }}
+  {{ end }}
+
+  <!-- Post Nav -->
+  {{ if not site.Params.disablePostNavigation }}<!---->
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
+  {{ if and (gt (len $pages) 1) (in $pages . ) }}
+  <nav
+    class="mt-24 flex rounded-lg bg-black/[3%] text-lg !leading-[1.2] dark:bg-white/[8%]"
+  >
+    {{ with $pages.Next . }}
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-medium no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="{{ .Permalink }}"
+      ><span class="mr-1.5">←</span><span>{{ .Name }}</span></a
+    >
+    {{ end }}<!---->
+    {{ with $pages.Prev . }}
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-medium no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="{{ .Permalink }}"
+      ><span>{{ .Name }}</span><span class="ml-1.5">→</span></a
+    >
+    {{ end }}
+  </nav>
+  {{ end }}<!---->
+  {{ end }}
+
+  <!-- Disqus -->
+  {{ if and site.Config.Services.Disqus.Shortname (not (eq .Params.comments
+  false)) }}
+  <div class="mt-24" id="disqus_thread"></div>
+  <script>
+    const disqusShortname = '{{ site.Config.Services.Disqus.Shortname }}';
+    const script = document.createElement('script');
+    script.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
+    script.setAttribute('data-timestamp', +new Date());
+    document.head.appendChild(script);
+  </script>
+  {{ end }}
+
+  <!-- GraphComment -->
+  {{ if and site.Params.graphCommentId (not (eq .Params.comments false)) }}
+  <div class="mt-24" id="graphcomment"></div>
+  <script type="text/javascript">
+    var __semio__params = {
+      graphcommentId: '{{ site.Params.graphCommentId  }}',
+      behaviour: {
+        //  uid: "...",
+      },
+      // configure your variables here
+    };
+
+    function __semio__onload() {
+      __semio__gc_graphlogin(__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src =
+        'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(gc);
+    })();
+  </script>
+  {{ end }}
+
+  <!-- mermaid -->
+  {{- partial "mermaid.html" . -}}
+
+  <!-- giscus comment -->
+  {{ if and site.Params.giscus.repo (not (eq .Params.comments false)) }}
+  <div class="mt-24 giscus"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="{{ site.Params.giscus.repo }}"
+    data-repo-id="{{ site.Params.giscus.repoId }}"
+    data-category="{{ site.Params.giscus.category }}"
+    data-category-id="{{ site.Params.giscus.categoryId }}"
+    data-mapping="{{ site.Params.giscus.mapping | default (print `pathname`) }}"
+    data-strict="{{ site.Params.giscus.strict | default (print `1`) }}"
+    data-reactions-enabled="{{ site.Params.giscus.reactionsEnabled | default (print `0`) }}"
+    data-emit-metadata="{{ site.Params.giscus.emitMetadata | default (print `0`) }}"
+    data-input-position="{{ site.Params.giscus.inputPosition | default (print `top`) }}"
+    data-theme="{{ site.Params.giscus.theme | default (print `light`) }}"
+    data-lang="{{ site.Params.giscus.lang | default (print `en`) }}"
+    data-loading="{{ site.Params.giscus.loading | default (print `lazy`) }}"
+    crossorigin="anonymous"
+    async
+  ></script>
+  {{ end }}
+</article>
+
+{{ end }}

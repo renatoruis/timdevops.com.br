@@ -1,0 +1,28 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer-grid">
+    <div class="site-footer-copy">
+      &copy; {{ now.Year }} <a class="link" href="{{ `` | absURL }}">{{ site.Title }}</a>
+    </div>
+
+    <nav class="site-footer-links" aria-label="Links do rodapé">
+      <a href="{{ `` | absURL }}">Início</a>
+      <a href="{{ `about/` | absURL }}">Sobre</a>
+      <a href="{{ `tags/` | absURL }}">Tags</a>
+      <a href="{{ `index.xml` | absURL }}" rel="alternate" type="application/rss+xml">RSS</a>
+    </nav>
+
+    {{ with $.Scratch.Get "social_list" }}
+    <nav class="site-footer-social" aria-label="Redes sociais">
+      {{ range . }}
+      <a
+        href="{{ if eq . `rss` }}{{ `index.xml` | absURL }}{{ else if eq . `mastodon` }}{{ index site.Params . }}{{ else }}https://{{ . }}{{ if eq . `threads` }}.net{{ else }}.com{{ end }}/{{ if eq . `linkedin` }}in/{{ end }}{{ index site.Params . }}{{ end }}"
+        target="_blank"
+        rel="{{ if eq . `rss` }}alternate{{ else }}me noopener{{ end }}"
+        style="background-image: url({{ printf `%s.svg` . | absURL }});"
+        aria-label="{{ . }}"
+      >{{ . }}</a>
+      {{ end }}
+    </nav>
+    {{ end }}
+  </div>
+</footer>

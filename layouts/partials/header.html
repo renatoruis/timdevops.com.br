@@ -1,0 +1,141 @@
+
+{{ $avatar_url := $.Scratch.Get "avatar_url" }}
+<header class="flex h-20 max-w-3xl px-8 mx-auto lg:justify-center">
+  <div class="relative z-50 flex items-center mr-auto">
+
+<div class="flex items-center">
+
+  <div
+    class="avatar-frame -ml-1 mr-5 aspect-square w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:bg-white/[15%]" >
+
+    {{ if $avatar_url }}
+    <img
+      class="my-0 h-full w-full rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80"
+      src="{{ $avatar_url }}"
+      alt="{{ site.Params.name | default site.Title }}"
+      width="96"
+      height="96"
+      loading="eager"
+      decoding="async"
+      />
+    {{ end }}
+  </div>
+
+
+    <a class="-translate-y-[1px] text-2xl" href="{{ `` | absURL }}"
+      >{{ site.Title }}</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer {{ if site.Params.monoDarkIcon }}[background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert{{ else }}[background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)]{{ end }} dark:[background-position:right]"
+      role="button"
+      tabindex="0"
+      aria-label="Alternar tema claro ou escuro"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    tabindex="0"
+    aria-label="Menu"
+    aria-expanded="false"
+  ></div>
+
+  {{ $bg_color := $.Scratch.Get "bg_color" }}<!---->
+
+  <script>
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      const open = htmlClass.toggle('open');
+      btnMenu.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    btnMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btnMenu.click();
+      }
+    });
+
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '{{ $bg_color }}'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(!htmlClass.contains('dark'));
+    });
+    btnDark.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setDark(!htmlClass.contains('dark'));
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && htmlClass.contains('open')) {
+        htmlClass.remove('open');
+        btnMenu.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    {{ $url := .RelPermalink }}<!---->
+    {{ with site.Menus.main }}
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10" aria-label="Menu principal">
+      {{ range . }}
+      {{ $isActive := or (eq $url .URL) (and (ne .URL "/") (hasPrefix $url .URL)) }}
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="{{ .URL }}"
+        {{ if $isActive }}aria-current="page"{{ end }}
+        >{{ .Name }}</a
+      >
+      {{ end }}
+    </nav>
+    {{ end }}<!---->
+
+    {{ with $.Scratch.Get "social_list" }}
+    <nav
+      class="flex justify-center mt-12 space-x-10 dark:invert lg:ml-14 lg:mt-0 lg:items-center"
+    >
+      {{ range . }}<!---->
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./{{ . }}.svg)"
+        href="{{ if eq . `rss` }}{{ `index.xml` | absURL }}{{ else if eq . `mastodon` }}{{ index site.Params . }}{{ else }}https://{{ . }}{{ if eq . `threads` }}.net{{ else }}.com{{ end }}/{{ if eq . `linkedin` }}in/{{ end }}{{ index site.Params . }}{{ end }}"
+        target="_blank"
+        rel="{{ if eq . `rss` }}alternate{{ else }}me{{ end }}"
+      >
+        {{ . }}
+      </a>
+
+      {{ end }}<!---->
+
+    </nav>
+    {{ end }}<!---->
+  </div>
+</header>

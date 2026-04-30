@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<section class="text-center" style="padding-top: 2rem;">
+  <p style="font-size: 5.5rem; line-height: 1; font-weight: 600; color: var(--accent); margin: 0;">404</p>
+  <h1 class="!my-0 mt-4">Essa página tirou um café.</h1>
+  <p class="opacity-75 mt-3">O link pode estar quebrado, ou o post mudou de lugar. Que tal um destes aqui embaixo?</p>
+
+  <div style="display: flex; gap: .5rem; justify-content: center; margin-top: 1.25rem; flex-wrap: wrap;">
+    <a class="btn" href="{{ `` | absURL }}">Ir para o início</a>
+    <a class="btn" href="{{ `tags/` | absURL }}" style="background: transparent; color: inherit; border: 1px solid var(--border);">Ver todas as tags</a>
+  </div>
+</section>
+
+{{ $recent := where site.RegularPages "Type" "in" site.Params.mainSections | first 5 }}
+{{ with $recent }}
+<aside class="not-prose" style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+  <p class="text-xs uppercase tracking-wider opacity-60" style="margin-bottom: .75rem;">Posts recentes</p>
+  <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem;">
+    {{ range . }}
+    <li>
+      <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
+        <span style="text-decoration: underline; text-underline-offset: 3px;">{{ .Title }}</span>
+        <span style="display: block; font-size: .75rem; opacity: .55; margin-top: 2px;">{{ .Date | time.Format ":date_medium" }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>
+{{ end }}
+
+{{ end }}

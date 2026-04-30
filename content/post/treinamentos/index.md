@@ -2,7 +2,7 @@
 author = "Renato Ruis (Tim)"
 title = "Grátis! Treinamentos e materiais"
 date = "2024-06-05"
-description = "Testados e aprovados por mim :)Testados e aprovados por mim :)"
+description = "Treinamentos, cursos e materiais gratuitos testados e aprovados — Linux, cloud e mais."
 
 +++
 

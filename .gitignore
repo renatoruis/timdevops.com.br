@@ -1,0 +1,23 @@
+# Hugo build output (gerado pelo GitHub Actions)
+docs/
+public/
+
+# Hugo internals
+.hugo_build.lock
+resources/_gen/
+hugo_stats.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Node (caso adicionemos tooling no futuro)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log

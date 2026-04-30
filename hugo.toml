@@ -1,49 +1,67 @@
 baseURL = 'https://timdevops.com.br/'
 publishDir = "docs"
-LanguageCode = 'pt'
+languageCode = 'pt-BR'
+defaultContentLanguage = 'pt-br'
 title = 'Tim DevOps'
 author = "Renato Ruis"
 pagerSize = 5
 theme = "paper"
+enableRobotsTXT = true
 
+mainSections = ["post"]
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-
+[related]
+  threshold = 80
+  includeNewer = true
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  [[related.indices]]
+    name = 'categories'
+    weight = 50
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "Home"
+    name = "Início"
     url = "/"
     weight = 1
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "Sobre"
     url = "/about/"
     weight = 2
-
+  [[menu.main]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/index.xml"
+    weight = 3
 
 [taxonomies]
 category = "categories"
 tag = "tags"
 series = "series"
 
-
 [params]
   author = 'Renato Ruis'
+  description = 'Artigos sobre DevOps, cloud, Kubernetes e produtividade. Blog do Renato Ruis (Tim DevOps).'
+  images = ['https://i.imgur.com/d8VeuPh.jpg']
   color = 'gray'
   instagram = 'renatoruis'
   linkedin = 'renatoruis'
   github = 'renatoruis'
-
 
   # home page profile
   avatar = 'https://i.imgur.com/d8VeuPh.jpg'
@@ -51,13 +69,13 @@ series = "series"
   bio = 'Onde escrevo o que vem na cabeça!'
 
   # misc
-  disableHLJS = true                        # disable highlight.js
-  disablePostNavigation = true              # disable post navigation
-  monoDarkIcon = true                       # show monochrome dark mode icon
-  math = true                               # enable KaTeX math typesetting globally
-  localKatex = false                        # use local KaTeX js/css instead of CDN
-  favicon = "favicon.png"                   # customize the default favicon
-  appleTouchIcon = "apple-touch-icon.png"   # customize the default Apple touch icon
+  disableHLJS = true
+  disablePostNavigation = false
+  monoDarkIcon = true
+  math = true
+  localKatex = false
+  favicon = "favicon.png"
+  appleTouchIcon = "apple-touch-icon.png"
 
   # giscus
 [params.giscus]

@@ -1,0 +1,63 @@
+<script>
+  (function () {
+    const KEY = 'consent';
+    const GA_ID = 'G-BYJ736YZMV';
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID, { anonymize_ip: true });
+    }
+
+    function hideBanner() {
+      const banner = document.getElementById('consent-banner');
+      if (banner) banner.hidden = true;
+    }
+
+    window.__consentAccept = function () {
+      try { localStorage.setItem(KEY, 'granted'); } catch (_) {}
+      hideBanner();
+      loadGA();
+    };
+
+    window.__consentDecline = function () {
+      try { localStorage.setItem(KEY, 'denied'); } catch (_) {}
+      hideBanner();
+    };
+
+    let stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (_) {}
+
+    if (stored === 'granted') {
+      loadGA();
+      return;
+    }
+    if (stored === 'denied') {
+      return;
+    }
+
+    function showBanner() {
+      const banner = document.getElementById('consent-banner');
+      if (banner) banner.hidden = false;
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showBanner);
+    } else {
+      showBanner();
+    }
+  })();
+</script>
+<div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Consentimento de cookies" hidden>
+  <p>Usamos analytics para entender como o site é usado. Tudo bem?</p>
+  <div class="consent-actions">
+    <button type="button" id="consent-decline" onclick="window.__consentDecline()">Recusar</button>
+    <button type="button" id="consent-accept" class="primary" onclick="window.__consentAccept()">Aceitar</button>
+  </div>
+</div>

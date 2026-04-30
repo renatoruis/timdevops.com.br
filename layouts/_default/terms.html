@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+{{ $kind := .Data.Plural }}
+<header class="mb-10">
+  <h1 class="!my-0 pb-2.5">
+    {{ if eq $kind "tags" }}Todas as tags{{ else if eq $kind "categories" }}Todas as categorias{{ else if eq $kind "series" }}Todas as séries{{ else }}{{ humanize $kind }}{{ end }}
+  </h1>
+  <p class="text-sm opacity-70 mt-1">{{ len .Data.Terms }} {{ if eq (len .Data.Terms) 1 }}item{{ else }}itens{{ end }} no total</p>
+</header>
+
+{{ $terms := slice }}
+{{ range $name, $taxonomy := .Data.Terms }}
+  {{ $terms = $terms | append (dict "name" $name "count" (len $taxonomy.Pages)) }}
+{{ end }}
+{{ $terms = sort $terms "count" "desc" }}
+
+{{ if $terms }}
+<ul class="terms-list not-prose">
+  {{ range $terms }}
+  <li>
+    <a href="{{ printf "/%s/%s/" $kind (urlize .name) | absURL }}">
+      <span>#{{ .name }}</span>
+      <span class="terms-count">{{ .count }}</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ else }}
+<p class="opacity-70">Nenhum termo encontrado.</p>
+{{ end }}
+
+{{ end }}

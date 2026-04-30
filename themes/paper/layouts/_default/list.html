@@ -13,19 +13,6 @@
 
 <div class="flex justify-center p-24 mt-4 mb-4">
   <div class="w-full max-w-lg">
-    <form id="search-form" class="flex">
-      <input
-        type="text"
-        id="search-input"
-        class="w-full"
-        placeholder="Buscar... "
-      />
-    </form>
-<script src="/js/search.js"></script>
-<br>
-<div id="search-results" style="display: none;"></div>
-
-<br>
 <!-- Articles -->
 {{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages
 }}<!---->
