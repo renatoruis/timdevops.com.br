@@ -11,56 +11,14 @@
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
 {{ end }}
 
-{{ if .IsHome }}
-<div class="search-wrapper">
-  <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <circle cx="11" cy="11" r="7"></circle>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-  </svg>
-  <form id="search-form" role="search" autocomplete="off" onsubmit="return false;">
-    <input
-      type="search"
-      id="search-input"
-      class="w-full"
-      placeholder="Buscar posts..."
-      autocomplete="off"
-      aria-label="Buscar posts"
-      aria-keyshortcuts="/"
-    />
-  </form>
-  <span class="search-kbd" aria-hidden="true">/</span>
-</div>
-<div id="search-results" role="region" aria-live="polite" aria-label="Resultados da busca" hidden></div>
-<script src="/js/search.js" defer></script>
-
-{{/* Tag cloud — top tags */}}
-{{ with site.Taxonomies.tags }}
-{{ $tags := slice }}
-{{ range $name, $taxonomy := . }}
-  {{ $tags = $tags | append (dict "name" $name "count" (len $taxonomy.Pages)) }}
-{{ end }}
-{{ $tags = sort $tags "count" "desc" | first 10 }}
-{{ if $tags }}
-<aside class="tag-cloud" aria-label="Tópicos populares">
-  <p class="tag-cloud-title">Tópicos populares</p>
-  <div class="tag-cloud-list">
-    {{ range $tags }}
-    <a href="{{ printf "/tags/%s/" (urlize .name) | absURL }}">#{{ .name }}<span style="opacity:.55; margin-left:4px; font-size:.7rem;">{{ .count }}</span></a>
-    {{ end }}
-  </div>
-</aside>
-{{ end }}
-{{ end }}
-{{ end }}
-
 <!-- Articles -->
 {{ $paginator := .Paginate $pages }}
 {{ range $index, $page := $paginator.Pages }}
-<section class="post-card relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+<section class="post-card relative my-10 first-of-type:mt-0 last-of-type:mb-0" style="--reveal-delay: {{ mul $index 60 }}ms;">
   {{ if gt .Weight 0 }}
   <span class="featured-badge">Destaque</span>
   {{ end }}
-  <h2 class="!my-0">{{ .Title }}</h2>
+  <h2 class="!my-0 post-title"><span>{{ .Title }}</span><span class="post-arrow" aria-hidden="true">→</span></h2>
   <div class="post-meta">
     {{ if .Date }}<time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date | time.Format ":date_medium" }}</time>{{ end }}
     {{ if and (eq .Section "post") .WordCount }}
@@ -99,6 +57,27 @@
   <a class="ml-auto btn" href="{{ $paginator.Next.URL }}" rel="next">{{ i18n "next_page" }} →</a>
   {{ end }}
 </nav>
+{{ end }}
+
+{{ if .IsHome }}
+{{/* Tag cloud — top tags (final da home) */}}
+{{ with site.Taxonomies.tags }}
+{{ $tags := slice }}
+{{ range $name, $taxonomy := . }}
+  {{ $tags = $tags | append (dict "name" $name "count" (len $taxonomy.Pages)) }}
+{{ end }}
+{{ $tags = sort $tags "count" "desc" | first 10 }}
+{{ if $tags }}
+<aside class="tag-cloud" aria-label="Tópicos populares">
+  <p class="tag-cloud-title">Tópicos populares</p>
+  <div class="tag-cloud-list">
+    {{ range $tags }}
+    <a href="{{ printf "/tags/%s/" (urlize .name) | absURL }}">#{{ .name }}<span style="opacity:.55; margin-left:4px; font-size:.7rem;">{{ .count }}</span></a>
+    {{ end }}
+  </div>
+</aside>
+{{ end }}
+{{ end }}
 {{ end }}
 
 {{ end }}

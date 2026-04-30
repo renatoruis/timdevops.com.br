@@ -43,11 +43,6 @@ mainSections = ["post"]
     name = "Sobre"
     url = "/about/"
     weight = 2
-  [[menu.main]]
-    identifier = "rss"
-    name = "RSS"
-    url = "/index.xml"
-    weight = 3
 
 [taxonomies]
 category = "categories"

@@ -30,7 +30,6 @@
     const before = start > 0 ? "…" : "";
     const after = end < content.length ? "…" : "";
     const slice = content.slice(start, end);
-    const re = new RegExp(escapeRegExp(query), "gi");
     const escaped = escapeHTML(slice);
     const escapedQuery = escapeHTML(query);
     return before + escaped.replace(new RegExp(escapeRegExp(escapedQuery), "gi"), (m) => `<mark>${m}</mark>`) + after;
@@ -52,30 +51,24 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("search-modal");
     const searchInput = document.getElementById("search-input");
     const searchResults = document.getElementById("search-results");
-    if (!searchInput || !searchResults) return;
+    if (!modal || !searchInput || !searchResults) return;
 
     let cache = null;
     let visibleCount = PAGE_SIZE;
     let lastResults = [];
     let lastQuery = "";
-
-    function showResults(query) {
-      visibleCount = PAGE_SIZE;
-      lastQuery = query;
-      render();
-    }
+    let isOpen = false;
 
     function render() {
       if (!lastQuery) {
-        searchResults.hidden = true;
-        searchResults.innerHTML = "";
+        searchResults.innerHTML = '<p class="search-empty">Comece a digitar para buscar posts…</p>';
         return;
       }
 
       if (lastResults.length === 0) {
-        searchResults.hidden = false;
         searchResults.innerHTML = `<p class="search-empty">Nenhum resultado para "${escapeHTML(lastQuery)}"</p>`;
         return;
       }
@@ -96,7 +89,6 @@
         ? `<button type="button" class="search-more" id="search-more">Ver mais (${lastResults.length - visibleCount})</button>`
         : "";
 
-      searchResults.hidden = false;
       searchResults.innerHTML = items + more;
 
       const btn = document.getElementById("search-more");
@@ -124,14 +116,15 @@
       if (query.length === 0) {
         lastQuery = "";
         lastResults = [];
-        searchResults.hidden = true;
-        searchResults.innerHTML = "";
+        render();
         return;
       }
 
       const finish = (pages) => {
         lastResults = filterPages(pages, query);
-        showResults(query);
+        lastQuery = query;
+        visibleCount = PAGE_SIZE;
+        render();
       };
 
       if (cache) {
@@ -139,7 +132,6 @@
         return;
       }
 
-      searchResults.hidden = false;
       searchResults.innerHTML = '<p class="search-empty">Carregando…</p>';
 
       fetch("/index.json")
@@ -152,33 +144,70 @@
           finish(pages);
         })
         .catch(() => {
-          searchResults.hidden = false;
           searchResults.innerHTML =
             '<p class="search-empty">Não foi possível carregar a busca.</p>';
         });
     }, DEBOUNCE_MS);
 
+    function openModal() {
+      if (isOpen) return;
+      isOpen = true;
+      modal.hidden = false;
+      requestAnimationFrame(() => modal.classList.add("is-open"));
+      document.documentElement.classList.add("search-open");
+      render();
+      setTimeout(() => searchInput.focus(), 30);
+    }
+
+    function closeModal() {
+      if (!isOpen) return;
+      isOpen = false;
+      modal.classList.remove("is-open");
+      document.documentElement.classList.remove("search-open");
+      searchInput.value = "";
+      lastQuery = "";
+      lastResults = [];
+      visibleCount = PAGE_SIZE;
+      setTimeout(() => {
+        if (!isOpen) modal.hidden = true;
+      }, 180);
+    }
+
     searchInput.addEventListener("input", runSearch);
 
-    searchInput.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        searchInput.value = "";
-        lastQuery = "";
-        lastResults = [];
-        searchResults.hidden = true;
-        searchResults.innerHTML = "";
-        searchInput.blur();
+    document.addEventListener("click", (e) => {
+      const opener = e.target.closest && e.target.closest("[data-search-open]");
+      if (opener) {
+        e.preventDefault();
+        openModal();
+        return;
+      }
+      const closer = e.target.closest && e.target.closest("[data-search-close]");
+      if (closer && isOpen) {
+        e.preventDefault();
+        closeModal();
       }
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key !== "/") return;
-      const tag = (e.target && e.target.tagName) || "";
-      const editable = e.target && e.target.isContentEditable;
-      if (editable || tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
-      e.preventDefault();
-      searchInput.focus();
-      searchInput.select();
+      const isCmdK = (e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K");
+      if (isCmdK) {
+        e.preventDefault();
+        if (isOpen) closeModal();
+        else openModal();
+        return;
+      }
+      if (e.key === "Escape" && isOpen) {
+        e.preventDefault();
+        closeModal();
+      }
+    });
+
+    searchResults.addEventListener("click", (e) => {
+      const link = e.target.closest && e.target.closest("a.search-result-link");
+      if (link) {
+        closeModal();
+      }
     });
   });
 })();
