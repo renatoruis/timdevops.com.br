@@ -43,6 +43,11 @@ mainSections = ["post"]
     name = "Sobre"
     url = "/about/"
     weight = 2
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "https://cv.timdevops.com.br/en/"
+    weight = 3
 
 [taxonomies]
 category = "categories"

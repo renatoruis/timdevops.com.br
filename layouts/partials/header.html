@@ -119,12 +119,14 @@
     {{ with site.Menus.main }}
     <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10" aria-label="Menu principal">
       {{ range . }}
-      {{ $isActive := or (eq $url .URL) (and (ne .URL "/") (hasPrefix $url .URL)) }}
+      {{ $external := or (hasPrefix .URL "http://") (hasPrefix .URL "https://") }}
+      {{ $isActive := and (not $external) (or (eq $url .URL) (and (ne .URL "/") (hasPrefix $url .URL))) }}
       <a
         class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
         href="{{ .URL }}"
+        {{ if $external }}target="_blank" rel="noopener"{{ end }}
         {{ if $isActive }}aria-current="page"{{ end }}
-        >{{ .Name }}</a
+        >{{ .Name }}{{ if $external }} <span aria-hidden="true" class="menu-external">↗</span>{{ end }}</a
       >
       {{ end }}
     </nav>

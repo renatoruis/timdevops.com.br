@@ -9,6 +9,16 @@
     <p class="about-tagline">{{ site.Params.bio | default "Onde escrevo o que vem na cabeça." }}</p>
   </header>
 
+  <div class="about-actions" data-reveal style="--reveal-delay: 40ms;">
+    <a class="about-btn primary" href="https://cv.timdevops.com.br/en/" target="_blank" rel="noopener">
+      Ver currículo
+      <span class="about-btn-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="about-btn" href="https://www.linkedin.com/in/renatoruis" target="_blank" rel="noopener">
+      LinkedIn
+    </a>
+  </div>
+
   <section class="about-prose" data-reveal style="--reveal-delay: 80ms;">
     {{ .Content }}
   </section>

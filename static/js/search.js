@@ -209,5 +209,16 @@
         closeModal();
       }
     });
+
+    // Sitelinks searchbox: abre o modal ja preenchido quando a URL tem ?q=
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get("q");
+      if (q && q.trim().length > 0) {
+        openModal();
+        searchInput.value = q;
+        runSearch();
+      }
+    } catch (_) {}
   });
 })();

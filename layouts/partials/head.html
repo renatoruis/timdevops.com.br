@@ -32,6 +32,16 @@
   <meta name="author" content="{{ $site_author }}" />
   {{ end }}
 
+  <!-- SEO reforcado -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="{{ site.Title }}" />
+
+  <!-- rel=me: sinais de autoria (IndieWeb, Mastodon, Google) -->
+  <link rel="me" href="https://cv.timdevops.com.br/en/" />
+  <link rel="me" href="https://www.linkedin.com/in/renatoruis" />
+  <link rel="me" href="https://github.com/renatoruis" />
+
   <!-- fonts (privacy-friendly, GDPR/LGPD safe via Bunny Fonts) -->
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
   <link
@@ -106,6 +116,53 @@
   {{ template "_internal/opengraph.html" . }}
   <!---->
   {{ template "_internal/twitter_cards.html" . }}
+
+  <!-- JSON-LD: Person (Knowledge Graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Renato Ruis",
+    "alternateName": "Tim DevOps",
+    "url": "{{ site.BaseURL }}",
+    "image": "{{ site.Params.avatar }}",
+    "jobTitle": "Senior DevOps Engineer",
+    "description": "Senior DevOps Engineer, CNCF Kubestronaut. Escrevo sobre DevOps, SRE, Cloud e Kubernetes.",
+    "sameAs": [
+      "https://cv.timdevops.com.br/en/",
+      "https://www.linkedin.com/in/{{ site.Params.linkedin }}",
+      "https://github.com/{{ site.Params.github }}",
+      "https://www.instagram.com/{{ site.Params.instagram }}"
+    ]
+  }
+  </script>
+
+  {{ if .IsHome }}
+  <!-- JSON-LD: WebSite + SearchAction (sitelinks searchbox) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.Title }}",
+    "alternateName": "Tim DevOps Blog",
+    "url": "{{ site.BaseURL }}",
+    "inLanguage": "pt-BR",
+    "publisher": {
+      "@type": "Person",
+      "name": "Renato Ruis",
+      "url": "{{ site.BaseURL }}"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ site.BaseURL }}?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  {{ end }}
 
   {{/* Per-post OG image override — looks for cover/feature/og bundle resources */}}
   {{ if eq .Kind "page" }}
